@@ -1,0 +1,44 @@
+:root {
+  --color-primary: #2d132c;
+  --color-secondary: #c72c41;
+  --color-bg: #715670;
+  --color-bg-light: #b79eb6;
+  --color-black: #160104;
+  --color-white: #dbdbdb;
+  --color-gray: #615960;
+  --color-gray-light: #a79da6;
+
+  --font-normal: "Open Sans", sans-serif;
+  --font-titles: "Roboto", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: var(--font-normal);
+}
+ul,
+body,
+li,
+figure {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header {
+  background-color: var(--color-secondary);
+}
+.header__logo {
+  width: 150px;
+}
+.header__img {
+  width: 100%;
+}
+.header__nav {
+  display: none;
+}

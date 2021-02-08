@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="shortcut icon" href="assets/favicon.svg" type="image/x-icon" />
+    <title>hec_lopz</title>
+  </head>
+  <body>
+    <header class="header">
+      <figure class="header__logo">
+        <img class="header__img" src="assets/hec_lopz-logo.svg" alt="" />
+      </figure>
+      <nav class="header__nav">
+        <ul>
+          <li><a href="#">Proyectos</a></li>
+          <li><a href="#">Contáctame</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <figure class="hero__photo"></figure>
+        <div class="hero__about-me">
+          <h1 class="hero__name">Héctor Eduardo López Carballo</h1>
+          <p class="hero__description">
+            Passionate about technology and self-taught programmer. I'm eager to
+            learn something new every day. Messing-up with computers is my
+            second hobbie, playing videogames the first.
+          </p>
+          <p>
+            I am a very friendly person and I really enjoy teamwork, sharing my
+            knowledge and learning from my co-workers is my best attribute. I'm
+            driven by integrity and emphaty.
+          </p>
+          <p>
+            I'm proficient in frontend development using vanilla Javascript, but
+            I enjoy using React as well. I would like to grow my programming
+            skills doing backend development with NodeJS or C# and .NET.
+          </p>
+          <div class="hero__social-media">
+            <i class="social-media__icon"></i>
+            <i class="social-media__icon"></i>
+            <i class="social-media__icon"></i>
+          </div>
+        </div>
+      </section>
+      <section class="projects">
+        <h1 class="section-title">Proyectos</h1>
+
+        <article class="card">
+          <div class="card__info">
+            <h2 class="card__title"></h2>
+            <div class="technologies card__technologies">
+              <ul class="technologies__list">
+                <li class="technologies__item"></li>
+                <li class="technologies__item"></li>
+              </ul>
+            </div>
+          </div>
+          <figure class="card__img"></figure>
+          <div class="card__description">
+            <h3 class="card__short-description"></h3>
+            <p class="card__full-description"></p>
+            <div class="card__links">
+              <span>URL: <a href="#">link</a></span>
+              <span>Repositorio: <a href="#">link</a></span>
+            </div>
+          </div>
+        </article>
+      </section>
+      <section class="contact">
+        <div class="contact__form">
+          <h1 class="section-title">Contáctame</h1>
+          <label for="name"
+            >Name:
+            <input id="name" name="name" type="text" />
+          </label>
+          <label for="email"
+            >Email address:
+            <input type="email" name="email" id="email" />
+          </label>
+          <label for="body"
+            >Mensaje:
+            <textarea name="body" id="body" cols="30" rows="10"></textarea>
+          </label>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="social-media"></div>
+    </footer>
+  </body>
+</html>
