@@ -1,0 +1,43 @@
+.hero
+  height calc(100vh - 56px)
+  min-height 55rem
+  background-color $color-secondary
+  padding 0 30px
+  color $color-white
+  // display flex
+  // flex-direction column
+  // justify-content  center
+  
+  &__photo
+    width 100px
+    height 100px
+    overflow hidden
+    border-radius 50%
+    margin 0 auto
+
+    @media screen and (min-width: 768px)
+      width 250px
+
+  &__about-me
+    display flex
+    align-items  center
+    // justify-content space-between
+    flex-direction column
+    height 80%
+    
+  &__name
+    font-size 2.8rem
+    text-align center
+    margin 10px 0
+  &__description
+    margin 10px 0
+    font-size 14px
+    text-align justify
+
+  &__social-media
+    height 3rem
+    margin auto 0
+  &__link
+    font-size 3rem
+    & + &
+      margin-left 5px

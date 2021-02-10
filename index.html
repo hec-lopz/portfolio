@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <script
+      src="https://kit.fontawesome.com/7414bc46c0.js"
+      crossorigin="anonymous"
+    ></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@700&display=swap"
       rel="stylesheet"
@@ -18,6 +22,9 @@
       <figure class="header__logo">
         <img class="header__img" src="assets/hec_lopz-logo.svg" alt="" />
       </figure>
+      <button class="header__burger">
+        <i class="fas fa-bars"></i>
+      </button>
       <nav class="header__nav">
         <ul>
           <li><a href="#">Proyectos</a></li>
@@ -27,28 +34,48 @@
     </header>
     <main>
       <section class="hero">
-        <figure class="hero__photo"></figure>
+        <figure class="hero__photo">
+          <img
+            src="assets/Profile_pic@100.png"
+            alt="heclopz photo"
+            srcset="
+              ./assets/Profile_pic@100.png 100w,
+              ./assets/Profile_pic@187.png 187w,
+              ./assets/Profile_pic@250.png 250w,
+              ./assets/Profile_pic@460.png 460w
+            "
+            sizes="(min-width: 600px) 187px,(min-width: 768px) 200px,(min-width: 1024px) 460px, 100px"
+            class="hero__img img"
+          />
+        </figure>
         <div class="hero__about-me">
           <h1 class="hero__name">Héctor Eduardo López Carballo</h1>
+
           <p class="hero__description">
             Passionate about technology and self-taught programmer. I'm eager to
             learn something new every day. Messing-up with computers is my
             second hobbie, playing videogames the first.
           </p>
-          <p>
+          <p class="hero__description">
             I am a very friendly person and I really enjoy teamwork, sharing my
             knowledge and learning from my co-workers is my best attribute. I'm
             driven by integrity and emphaty.
           </p>
-          <p>
+          <p class="hero__description">
             I'm proficient in frontend development using vanilla Javascript, but
             I enjoy using React as well. I would like to grow my programming
             skills doing backend development with NodeJS or C# and .NET.
           </p>
           <div class="hero__social-media">
-            <i class="social-media__icon"></i>
-            <i class="social-media__icon"></i>
-            <i class="social-media__icon"></i>
+            <a href="" class="hero__link">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="" class="hero__link">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="" class="hero__link">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
           </div>
         </div>
       </section>
