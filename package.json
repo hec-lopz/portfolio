@@ -1,0 +1,21 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hec-lopz/portfolio.git"
+  },
+  "keywords": [],
+  "author": "Hector Lopez <hlopezcarballo@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hec-lopz/portfolio/issues"
+  },
+  "homepage": "https://github.com/hec-lopz/portfolio#readme",
+  "dependencies": {}
+}
