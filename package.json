@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npx stylus -w stylus/main.styl -o css/styles.css & npx live-server"
   },
   "repository": {
     "type": "git",
@@ -17,5 +17,8 @@
     "url": "https://github.com/hec-lopz/portfolio/issues"
   },
   "homepage": "https://github.com/hec-lopz/portfolio#readme",
-  "dependencies": {}
+  "devDependencies": {
+    "live-server": "^1.2.1",
+    "stylus": "^0.54.8"
+  }
 }
