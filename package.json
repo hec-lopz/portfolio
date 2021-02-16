@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npx stylus -w stylus/main.styl -o css/styles.css & npx live-server"
+    "start": "live-server & stylus -w stylus/main.styl -o css/styles.css"
   },
   "repository": {
     "type": "git",
