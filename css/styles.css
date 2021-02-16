@@ -3,11 +3,27 @@ html {
 }
 body {
   font-family: "Open Sans", sans-serif;
+  background-color: #c72c41;
 }
 h1,
 h2,
 h3 {
   font-family: "Roboto", sans-serif;
+}
+h1 {
+  font-size: 28px;
+}
+h2 {
+  font-size: 24px;
+}
+h3 {
+  font-size: 20px;
+}
+p {
+  font-size: 14px;
+}
+small {
+  font-size: 12px;
 }
 ul,
 body,
@@ -36,6 +52,9 @@ button {
 .img {
   width: 100%;
 }
+.section-title {
+  margin-top: 0;
+}
 .header {
   background-color: #c72c41;
   display: flex;
@@ -59,10 +78,12 @@ button {
   display: none;
 }
 .hero {
-  height: calc(100vh - 56px);
+  max-width: 320px;
+  height: calc(100vh - 96px);
   min-height: 55rem;
+  margin: auto;
   background-color: #c72c41;
-  padding: 0 30px;
+  padding: 20px;
   color: #dbdbdb;
 }
 .hero__photo {
@@ -75,6 +96,7 @@ button {
 @media screen and (min-width: 768px) {
   .hero__photo {
     width: 250px;
+    height: 250px;
   }
 }
 .hero__about-me {
@@ -102,4 +124,70 @@ button {
 }
 .hero__link + .hero__link {
   margin-left: 5px;
+}
+.projects {
+  background-color: #2d132c;
+  color: #dbdbdb;
+  padding: 20px;
+}
+.projects__container {
+  max-width: 360px;
+  margin: auto;
+}
+.grid-container {
+  display: grid;
+  max-width: 360px;
+}
+.card {
+  color: #dbdbdb;
+  background-color: #715670;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.card__header {
+  padding: 20px;
+  padding-bottom: 10px;
+}
+.card__title {
+  margin: 5px 0;
+}
+.card__fig {
+  height: 250px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  background-color: #dbdbdb;
+}
+.card__img {
+  object-fit: cover;
+  object-position: top;
+  min-height: 200px;
+}
+.card:hover .card__img {
+  object-fit: cover;
+  width: 70%;
+  margin: auto;
+  height: 250px;
+  object-position: top;
+}
+.card__body {
+  background-color: #dbdbdb;
+  color: #160104;
+  padding: 20px;
+}
+.card__body > p {
+  margin-top: 0;
+}
+.technologies {
+  margin-top: 10px;
+}
+.technologies__list {
+  display: flex;
+  list-style: none;
+}
+.technologies__item {
+  font-size: 2.5rem;
+}
+.technologies__item + .technologies__item {
+  margin-left: 10px;
 }

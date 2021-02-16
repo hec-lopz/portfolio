@@ -1,0 +1,43 @@
+.card
+  color $color-white
+  background-color $color-bg
+  border-radius 10px
+  overflow hidden
+  &__header
+    padding $padding
+    padding-bottom 10px
+  &__title
+    margin 5px 0
+  &__fig
+    height 250px
+    overflow hidden
+    display flex
+    justify-content center
+    background-color $color-white
+  &__img
+    object-fit cover
+    object-position top
+    min-height 200px
+  &:hover &__img
+    object-fit cover
+    width 70%
+    margin auto
+    height 250px
+    object-position top
+
+  &__body
+    background-color $color-white
+    color $color-black
+    padding $padding
+    & > p
+      margin-top 0
+
+.technologies
+  margin-top 10px
+  &__list
+    display flex
+    list-style none
+  &__item
+    font-size 2.5rem
+  &__item + &__item
+    margin-left 10px
