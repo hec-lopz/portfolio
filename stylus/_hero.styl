@@ -1,8 +1,10 @@
 .hero
-  height calc(100vh - 56px)
+  max-width 320px
+  height calc(100vh - 96px)
   min-height 55rem
+  margin auto
   background-color $color-secondary
-  padding 0 30px
+  padding $padding
   color $color-white
   // display flex
   // flex-direction column
@@ -10,13 +12,14 @@
   
   &__photo
     width 100px
-    height 100px
+    height @width
     overflow hidden
     border-radius 50%
     margin 0 auto
 
     @media screen and (min-width: 768px)
       width 250px
+      height @width
 
   &__about-me
     display flex
