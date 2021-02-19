@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "live-server & stylus -w stylus/main.styl -o css/styles.css"
+    "start": "live-server --watch=index.html,css/styles.css & stylus -w stylus/main.styl -o css/styles.css"
   },
   "repository": {
     "type": "git",

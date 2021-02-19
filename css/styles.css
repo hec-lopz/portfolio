@@ -11,19 +11,24 @@ h3 {
   font-family: "Roboto", sans-serif;
 }
 h1 {
-  font-size: 28px;
+  font-size: 2.8rem;
+  letter-spacing: 0.01em;
 }
 h2 {
-  font-size: 24px;
+  font-size: 2.4rem;
+  letter-spacing: 0.015em;
 }
 h3 {
-  font-size: 20px;
+  letter-spacing: 0.015em;
+  font-size: 2rem;
 }
 p {
-  font-size: 14px;
+  font-size: 1.4rem;
+  letter-spacing: 0.015em;
 }
 small {
-  font-size: 12px;
+  font-size: 1.2rem;
+  letter-spacing: 0.015em;
 }
 ul,
 body,
@@ -35,6 +40,9 @@ figure {
 a {
   text-decoration: none;
   color: inherit;
+}
+input {
+  border: none;
 }
 p {
   line-height: 1.5rem;
@@ -54,6 +62,57 @@ button {
 }
 .section-title {
   margin-top: 0;
+}
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  background-color: #2d132c;
+  color: #dbdbdb;
+  border-radius: 10px;
+  font-size: 1.4rem;
+  letter-spacing: 0.1em;
+  font-weight: thin;
+  text-transform: capitalize;
+}
+.container {
+  max-width: 360px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.contact {
+  color: #dbdbdb;
+  background-color: #715670;
+}
+.contact__btn {
+  margin-top: 10px;
+}
+.input-group {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.4rem;
+}
+.input-group__label {
+  font-size: 1.4rem;
+}
+.input-group__input {
+  background-color: #dbdbdb;
+  border: none;
+  border-radius: 10px;
+  padding: 5px 10px;
+  font-size: inherit;
+  color: #160104;
+}
+.input-group__input--text-area {
+  max-width: 360px;
+}
+.input-group__label + .input-group__input {
+  margin-top: 10px;
+}
+.input-group + .input-group {
+  margin-top: 10px;
 }
 .header {
   background-color: #c72c41;
@@ -128,15 +187,11 @@ button {
 .projects {
   background-color: #2d132c;
   color: #dbdbdb;
-  padding: 20px;
-}
-.projects__container {
-  max-width: 360px;
-  margin: auto;
 }
 .grid-container {
   display: grid;
   max-width: 360px;
+  gap: 20px;
 }
 .card {
   color: #dbdbdb;
@@ -163,13 +218,6 @@ button {
   object-position: top;
   min-height: 200px;
 }
-.card:hover .card__img {
-  object-fit: cover;
-  width: 70%;
-  margin: auto;
-  height: 250px;
-  object-position: top;
-}
 .card__body {
   background-color: #dbdbdb;
   color: #160104;
@@ -177,6 +225,20 @@ button {
 }
 .card__body > p {
   margin-top: 0;
+}
+.card__links {
+  display: flex;
+}
+.card__btn--project {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.card__btn--git {
+  width: 50px;
+  font-size: 2rem;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: #160104;
 }
 .technologies {
   margin-top: 10px;

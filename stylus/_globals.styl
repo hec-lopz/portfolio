@@ -15,16 +15,17 @@ $color-gray-light = #a79da6
 *************/
 $font-normal = "Open Sans", sans-serif
 $font-titles = "Roboto", sans-serif
-$font-size-h1 = 28px
-$font-size-h2 = 24px
-$font-size-h3 = 20px
-$font-size-p = 14px
-$font-size-small = 12px
+$font-size-h1 = 2.8rem
+$font-size-h2 = 2.4rem
+$font-size-h3 = 2rem
+$font-size-p = 1.4rem
+$font-size-small = 1.2rem
 /*************\
 *   Box sizes
 *************/
 $padding = 20px
 $max-width-mobile = 360px
+$border-radius = 10px
 
 html
   font-size: 62.5%
@@ -37,14 +38,20 @@ h1,h2,h3
   font-family $font-titles
 h1
   font-size $font-size-h1
+  letter-spacing .01em
 h2
   font-size $font-size-h2
+  letter-spacing .015em
+
 h3
+  letter-spacing .015em
   font-size $font-size-h3
 p
   font-size $font-size-p
+  letter-spacing .015em
 small
   font-size $font-size-small
+  letter-spacing .015em
 ul,
 body,
 li,
@@ -55,6 +62,8 @@ figure
 a
   text-decoration: none
   color: inherit
+input
+  border none
 p
   line-height 1.5rem
 
@@ -73,3 +82,23 @@ button
 
 .section-title
   margin-top 0
+
+.button
+  display flex
+  justify-content center
+  align-items center
+  width 100%
+  height 40px
+  background-color $color-primary
+  color $color-white
+  border-radius $border-radius
+  font-size $font-size-p
+  letter-spacing .1em
+  // font-family $font-titles
+  font-weight thin
+  text-transform capitalize
+
+.container
+  max-width $max-width-mobile
+  margin 0 auto
+  padding $padding
