@@ -18,12 +18,12 @@
     object-fit cover
     object-position top
     min-height 200px
-  &:hover &__img
-    object-fit cover
-    width 70%
-    margin auto
-    height 250px
-    object-position top
+  // &:hover &__img
+  //   object-fit cover
+  //   width 70%
+  //   margin auto
+  //   height 250px
+  //   object-position top
 
   &__body
     background-color $color-white
@@ -31,6 +31,19 @@
     padding $padding
     & > p
       margin-top 0
+  &__links
+    display flex
+  
+  &__btn--project
+    border-top-right-radius 0
+    border-bottom-right-radius 0 
+  &__btn--git
+    width 50px
+    font-size 2rem
+    border-top-left-radius 0 
+    border-bottom-left-radius 0
+    background-color $color-black
+
 
 .technologies
   margin-top 10px
