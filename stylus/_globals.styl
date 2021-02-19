@@ -3,6 +3,8 @@
 *   Colors
 *************/
 $color-primary = #2d132c
+$color-primary-hover = #4A2E49
+
 $color-secondary = #c72c41
 $color-bg = #715670
 $color-bg-light = #b79eb6
@@ -97,6 +99,8 @@ button
   // font-family $font-titles
   font-weight thin
   text-transform capitalize
+  &:hover
+    background-color $color-primary-hover
 
 .container
   max-width $max-width-mobile
