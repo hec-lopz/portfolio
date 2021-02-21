@@ -34,62 +34,59 @@
     </header>
     <main>
       <section class="hero">
-        <figure class="hero__photo">
-          <img
-            src="assets/Profile_pic@100.png"
-            alt="heclopz photo"
-            srcset="
-              ./assets/Profile_pic@100.png 100w,
-              ./assets/Profile_pic@187.png 187w,
-              ./assets/Profile_pic@250.png 250w,
-              ./assets/Profile_pic@460.png 460w
-            "
-            sizes="(min-width: 600px) 187px,(min-width: 768px) 200px,(min-width: 1024px) 460px, 100px"
-            class="hero__img img"
-          />
-        </figure>
-        <div class="hero__about-me">
-          <h1 class="hero__name">
-            <span>Héctor Eduardo </span><span>López Carballo</span>
-          </h1>
+        <div class="hero__container container">
+          <figure class="hero__photo">
+            <img
+              src="assets/photo@200px.jpg"
+              alt="heclopz photo"
+              srcset="
+                ./assets/photo@200px.jpg     150w,
+                ./assets/Profile_pic@187.png 187w,
+                ./assets/Profile_pic@250.png 250w,
+                ./assets/Profile_pic@460.png 460w
+              "
+              sizes="(min-width: 600px) 187px,(min-width: 768px) 200px,(min-width: 1024px) 460px, 100px"
+              class="hero__img img"
+            />
+          </figure>
+          <div class="hero__about-me">
+            <h1 class="hero__name">
+              <span>Héctor Eduardo </span><span>López Carballo</span>
+            </h1>
 
-          <p class="hero__description">
-            Passionate about technology and self-taught programmer. I'm eager to
-            learn something new every day. Messing-up with computers is my
-            second hobbie, playing videogames the first.
-          </p>
-          <p class="hero__description">
-            I am a very friendly person and I really enjoy teamwork, sharing my
-            knowledge and learning from my co-workers is my best attribute. I'm
-            driven by integrity and emphaty.
-          </p>
-          <p class="hero__description">
-            I'm proficient in frontend development using vanilla Javascript, but
-            I enjoy using React as well. I would like to grow my programming
-            skills doing backend development with NodeJS or C# and .NET.
-          </p>
-          <div class="hero__social-media social-media">
-            <a
-              target="blank"
-              href="https://github.com/hec-lopz"
-              class="hero__link"
-            >
-              <i class="fab fa-github"></i>
-            </a>
-            <a
-              target="blank"
-              href="https://twitter.com/hec_lopz"
-              class="hero__link"
-            >
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a
-              target="blank"
-              href="https://www.linkedin.com/in/hec-lopz/"
-              class="hero__link"
-            >
-              <i class="fab fa-linkedin-in"></i>
-            </a>
+            <p class="hero__description">
+              Passionate about technology and self-taught programmer. I'm eager
+              to learn something new every day. Messing-up with computers is my
+              second hobbie, playing videogames the first.
+            </p>
+            <p class="hero__description">
+              I am a very friendly person and I really enjoy teamwork, sharing
+              my knowledge and learning from my co-workers is my best attribute.
+              I'm driven by integrity and emphaty.
+            </p>
+            <p class="hero__description">
+              I'm proficient in frontend development using vanilla Javascript,
+              but I enjoy using React as well. I would like to grow my
+              programming skills doing backend development with NodeJS or C# and
+              .NET.
+            </p>
+            <ul class="hero__social-media social-media">
+              <li class="hero__link">
+                <a target="blank" href="https://github.com/hec-lopz">
+                  <i class="fab fa-github"></i>
+                </a>
+              </li>
+              <li class="hero__link">
+                <a target="blank" href="https://twitter.com/hec_lopz">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li class="hero__link">
+                <a target="blank" href="https://www.linkedin.com/in/hec-lopz/">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
@@ -97,6 +94,86 @@
         <div class="projects__container container">
           <h1 class="section-title">Projects</h1>
           <div class="grid-container">
+            <article class="card">
+              <div class="card__header">
+                <h2 class="card__title">Job listings</h2>
+                <div class="technologies card__technologies">
+                  <ul class="technologies__list">
+                    <li class="technologies__item">
+                      <i class="fab fa-js-square"></i>
+                    </li>
+                    <li class="technologies__item">
+                      <i class="fab fa-css3-alt"></i>
+                    </li>
+                    <li class="technologies__item">
+                      <i class="fab fa-html5"></i>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <figure class="card__fig">
+                <img
+                  class="card__img img"
+                  src="./assets/job-listings.png"
+                  alt=""
+                />
+              </figure>
+              <div class="card__body">
+                <p class="card__description">
+                  This component was made using vanilla javascript, pure css and
+                  html. Bundled usign webpack, css classes were named based on
+                  the BEM metholodigy
+                </p>
+                <div class="card__links">
+                  <a class="button card__btn card__btn--project">
+                    View project
+                  </a>
+                  <a class="button card__btn card__btn--git">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card__header">
+                <h2 class="card__title">Job listings</h2>
+                <div class="technologies card__technologies">
+                  <ul class="technologies__list">
+                    <li class="technologies__item">
+                      <i class="fab fa-js-square"></i>
+                    </li>
+                    <li class="technologies__item">
+                      <i class="fab fa-css3-alt"></i>
+                    </li>
+                    <li class="technologies__item">
+                      <i class="fab fa-html5"></i>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <figure class="card__fig">
+                <img
+                  class="card__img img"
+                  src="./assets/job-listings.png"
+                  alt=""
+                />
+              </figure>
+              <div class="card__body">
+                <p class="card__description">
+                  This component was made using vanilla javascript, pure css and
+                  html. Bundled usign webpack, css classes were named based on
+                  the BEM metholodigy
+                </p>
+                <div class="card__links">
+                  <a class="button card__btn card__btn--project">
+                    View project
+                  </a>
+                  <a class="button card__btn card__btn--git">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
             <article class="card">
               <div class="card__header">
                 <h2 class="card__title">Job listings</h2>
