@@ -40,12 +40,16 @@
               src="assets/photo@200px.jpg"
               alt="heclopz photo"
               srcset="
-                ./assets/photo@200px.jpg     150w,
+                assets/Profile_pic@100.png   150w,
                 ./assets/Profile_pic@187.png 187w,
                 ./assets/Profile_pic@250.png 250w,
                 ./assets/Profile_pic@460.png 460w
               "
-              sizes="(min-width: 600px) 187px,(min-width: 768px) 200px,(min-width: 1024px) 460px, 100px"
+              sizes="
+                ((min-width: 600px) and (max-width: 767px)) 187px,
+                ((min-width: 768px) and (max-width:1023px)) 251px,
+                (min-width: 1024px) 460px, 
+                150px"
               class="hero__img img"
             />
           </figure>
@@ -257,25 +261,6 @@
       </section>
     </main>
     <footer class="footer container">
-      <!-- <div class="footer__social-media social-media">
-        <a target="blank" href="https://github.com/hec-lopz" class="hero__link">
-          <i class="fab fa-github"></i>
-        </a>
-        <a
-          target="blank"
-          href="https://twitter.com/hec_lopz"
-          class="hero__link"
-        >
-          <i class="fab fa-twitter"></i>
-        </a>
-        <a
-          target="blank"
-          href="https://www.linkedin.com/in/hec-lopz/"
-          class="hero__link"
-        >
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-      </div> -->
       <small class="footer__text"
         >Designed and developed with 💜 by
         <a

@@ -6,9 +6,11 @@
   background-color $color-secondary
   padding $padding
   color $color-white
-  // display flex
+  display flex
   // flex-direction column
-  // justify-content  center
+  justify-content  center
+  &__container
+    padding 0
   
   &__photo
     width 100px
@@ -16,13 +18,13 @@
     overflow hidden
     border-radius 50%
     margin 0 auto
+
+    // @media screen and (min-width: 768px)
+    //   width 250px
+    //   height @width
   &__img
     object-position right
     object-fit cover
-
-    @media screen and (min-width: 768px)
-      width 250px
-      height @width
 
   &__about-me
     display flex
@@ -41,6 +43,8 @@
     margin 10px 0
     font-size 14px
     text-align justify
+  &__social-media
+    // margin-top $box-margin
   &__link
     font-size 3rem
     & + &
