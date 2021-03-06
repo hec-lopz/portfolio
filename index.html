@@ -49,9 +49,8 @@
               src="assets/photo@200px.jpg"
               alt="heclopz photo"
               srcset="
-                assets/Profile_pic@100.png   150w,
-                ./assets/Profile_pic@187.png 187w,
-                ./assets/Profile_pic@250.png 250w,
+                ./assets/photo@200px.jpg     200w,
+                ./assets/photo@350px.jpg     350w,
                 ./assets/Profile_pic@460.png 460w
               "
               sizes="
@@ -284,22 +283,5 @@
       >
     </footer>
     <script src="./scripts/index.js" type="module"></script>
-    <!-- <script>
-      let menuOpen = false;
-      const $menu_btn = document.querySelector(".mobile-btn");
-      const $mobile_menu = document.querySelector(".mobile-nav");
-      $menu_btn.addEventListener("click", (e) => {
-        console.log(e);
-        if (menuOpen) {
-          $menu_btn.classList.remove("menu-btn--open");
-          $mobile_menu.classList.remove("mobile-nav--open");
-          menuOpen = false;
-        } else {
-          $menu_btn.classList.add("menu-btn--open");
-          $mobile_menu.classList.add("mobile-nav--open");
-          menuOpen = true;
-        }
-      });
-    </script> -->
   </body>
 </html>
