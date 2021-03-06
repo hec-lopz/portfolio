@@ -18,13 +18,22 @@
     <title>hec_lopz</title>
   </head>
   <body>
-    <header class="header">
+    <nav class="mobile-nav">
+      <ul class="mobile-nav__list">
+        <li class="mobile-nav__item"><a href="#home">Home</a></li>
+        <li class="mobile-nav__item"><a href="#projects">Projects</a></li>
+        <li class="mobile-nav__item"><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="mobile-btn">
+      <div class="menu-btn">
+        <div class="menu-btn__burger"></div>
+      </div>
+    </button>
+    <header class="header" id="home">
       <figure class="header__logo">
         <img class="header__img" src="assets/hec_lopz-logo.svg" alt="" />
       </figure>
-      <button class="header__burger">
-        <i class="fas fa-bars"></i>
-      </button>
       <nav class="header__nav">
         <ul>
           <li><a href="#">Proyectos</a></li>
@@ -94,7 +103,7 @@
           </div>
         </div>
       </section>
-      <section class="projects">
+      <section class="projects" id="projects">
         <div class="projects__container container">
           <h1 class="section-title">Projects</h1>
           <div class="grid-container">
@@ -221,7 +230,7 @@
           </div>
         </div>
       </section>
-      <section class="contact">
+      <section class="contact" id="contact">
         <div class="contact__container container">
           <h1 class="section-title">Contact me</h1>
           <form action="" class="contact__form">
@@ -274,5 +283,23 @@
         >©2021 Héctor Eduardo López Carballo. All rights reserved.</small
       >
     </footer>
+    <script src="./scripts/index.js" type="module"></script>
+    <!-- <script>
+      let menuOpen = false;
+      const $menu_btn = document.querySelector(".mobile-btn");
+      const $mobile_menu = document.querySelector(".mobile-nav");
+      $menu_btn.addEventListener("click", (e) => {
+        console.log(e);
+        if (menuOpen) {
+          $menu_btn.classList.remove("menu-btn--open");
+          $mobile_menu.classList.remove("mobile-nav--open");
+          menuOpen = false;
+        } else {
+          $menu_btn.classList.add("menu-btn--open");
+          $mobile_menu.classList.add("mobile-nav--open");
+          menuOpen = true;
+        }
+      });
+    </script> -->
   </body>
 </html>

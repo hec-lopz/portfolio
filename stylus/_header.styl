@@ -12,10 +12,56 @@
 
   &__img
     width 100%
-  &__burger
-    font-size 2.5rem
-    position absolute
-    right 20px
 
   &__nav
+    position absolute
+    background-color blue
+    left 0
+    right 0
+    top 0
+    bottom 0
     display none
+
+.mobile-btn
+  width 5rem
+  height 5rem
+  // width 5rem
+  // height 5rem
+  display grid
+  place-items center
+  position fixed
+  border-radius 50%
+  right 1rem
+  top .3rem
+  z-index 10
+  background $color-secondary
+
+
+  
+.mobile-nav
+  display flex
+  justify-content center
+  color $color-white
+  font-size $font-size-h1
+  position fixed
+  width 100vw
+  height 100vh
+  background-color $color-primary
+  // left 0
+  right -@width
+  opacity 0
+  top 0
+  bottom 0
+  z-index 10
+  transition all .5s ease
+  &__list
+    display flex
+    justify-content center
+    flex-direction column
+  &__item
+    & + & 
+      margin-top 20px
+
+  &--open
+    right   0
+    opacity 1

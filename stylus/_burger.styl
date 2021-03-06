@@ -1,0 +1,41 @@
+$burger-button-width = 2.5rem
+
+.menu-btn
+  // border 1px solid white
+  // width 100%
+  // height @width
+  position relative
+  // margin-left 50px
+  // padding 5px
+  // display 
+  &__burger
+    width $burger-button-width
+    height .35rem
+    background $color-white
+    transition all .5s ease
+    &::after, &::before
+      content ""
+      position absolute
+      width $burger-button-width
+      height .35rem
+      background $color-white
+      left 0
+      transition all .5s ease
+
+    &::before
+      transform translateY(-.8rem)
+    &::after
+      transform translateY(.8rem)
+  
+  
+  &--open &__burger
+    transform translateX(-100%)
+    background transparent
+    &::before
+      transform  translate(calc(100%), -.045rem) rotate(45deg)
+    &::after
+      transform  translate(calc(100%), -.045rem) rotate(-45deg)
+    
+
+
+  
