@@ -105,15 +105,18 @@ button
   // font-family $font-titles
   font-weight thin
   text-transform capitalize
+  cursor pointer
   &:hover
     background-color $color-primary-hover
 
 .container
   max-width $max-width-mobile
   margin 0 auto
-  padding $padding 0
+  padding $padding
   @media(min-width: 1240px)
     max-width 740px
+  @media(min-width: 1920px)
+    max-width 1100px
 .social-media
   height 3rem
   margin auto 0

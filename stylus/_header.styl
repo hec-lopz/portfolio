@@ -1,10 +1,15 @@
 .header
   background-color $color-secondary
-  display flex
-  justify-content center 
-  align-items center
-  padding 5px 0
-  position relative
+  @media(min-width:1280px)
+    padding-top 10px
+  &__container
+    display flex
+    justify-content center 
+    align-items center
+    padding 5px 0
+    position relative
+    @media(min-width 1280px)
+      justify-content space-between
   
 
   &__logo
@@ -14,13 +19,18 @@
     width 100%
 
   &__nav
-    position absolute
-    background-color blue
-    left 0
-    right 0
-    top 0
-    bottom 0
     display none
+
+    @media(min-width 1280px)
+      display block
+  &__btns-container
+    display flex
+    width 250px
+  &__btn
+    // text-transform uppercase
+  &__btn + &__btn
+    margin-left 10px
+
 
 .mobile-btn
   width 5rem
@@ -35,6 +45,8 @@
   top .3rem
   z-index 10
   background $color-secondary
+  @media(min-width 1280px)
+    display none
   &--scrolled
     background $color-primary
   &.menu-btn--open
