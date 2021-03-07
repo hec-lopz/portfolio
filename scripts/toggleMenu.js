@@ -18,21 +18,21 @@ function toggleMenu({ state, button, menu, menu_items }) {
       state = false;
     });
   });
-  document.addEventListener("scroll", () => {
-    console.log(window.innerHeight, window.scrollY);
-    if (
-      window.scrollY <= window.innerHeight &&
-      window.scrollY >= window.innerHeight - 100
-    ) {
-      button.classList.remove("mobile-btn--scrolled");
-    }
-    if (
-      window.scrollY >= window.innerHeight &&
-      window.scrollY <= window.innerHeight + 100
-    ) {
-      button.classList.add("mobile-btn--scrolled");
-    }
-  });
+  // document.addEventListener("scroll", () => {
+  //   console.log(window.innerHeight, window.scrollY);
+  //   if (
+  //     window.scrollY <= window.innerHeight &&
+  //     window.scrollY >= window.innerHeight - 100
+  //   ) {
+  //     button.classList.remove("mobile-btn--scrolled");
+  //   }
+  //   if (
+  //     window.scrollY >= window.innerHeight &&
+  //     window.scrollY <= window.innerHeight + 100
+  //   ) {
+  //     button.classList.add("mobile-btn--scrolled");
+  //   }
+  // });
 }
 
 export default toggleMenu;
