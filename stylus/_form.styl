@@ -6,6 +6,26 @@
   background-color $color-bg
   &__btn
     margin-top 10px
+    @media(min-width:1280px)
+      width 150px
+      margin-left auto
+  &__form
+    display flex
+  &__left-group
+    @media(min-width:1280px)
+      width 350px
+      margin-right 20px
+      // display grid
+      // place-items center
+      // display flex
+      // align-items center
+      // justify-content center
+      // flex-direction column
+  &__right-group
+    @media(min-width:1280px)
+      width 350px
+
+  
 
 .input-group 
   display flex
@@ -21,7 +41,9 @@
     font-size inherit
     color $color-black
     &--text-area
-      max-width 360px
+      // max-width 360px
+      @media(min-width:1280px)
+        height 85px
   &__label + &__input
     margin-top 10px
   & + & 

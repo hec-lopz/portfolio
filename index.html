@@ -49,9 +49,9 @@
               src="assets/photo@200px.jpg"
               alt="heclopz photo"
               srcset="
-                ./assets/photo@200px.jpg     200w,
-                ./assets/photo@350px.jpg     350w,
-                ./assets/Profile_pic@460.png 460w
+                ./assets/photo@200px.jpg 200w,
+                ./assets/photo@350px.jpg 350w,
+                ./assets/photo@460px.jpg 460w
               "
               sizes="
                 ((min-width: 600px) and (max-width: 767px)) 187px,
@@ -233,37 +233,41 @@
         <div class="contact__container container">
           <h1 class="section-title">Contact me</h1>
           <form action="" class="contact__form">
-            <div class="input-group">
-              <label class="input-group__label" for="name">Name</label>
-              <input
-                class="input-group__input"
-                id="name"
-                name="name"
-                type="text"
-              />
+            <div class="contact__left-group">
+              <div class="input-group">
+                <label class="input-group__label" for="name">Name</label>
+                <input
+                  class="input-group__input"
+                  id="name"
+                  name="name"
+                  type="text"
+                />
+              </div>
+              <div class="input-group">
+                <label class="input-group__label" for="email"
+                  >Email address
+                </label>
+                <input
+                  class="input-group__input"
+                  type="email"
+                  name="email"
+                  id="email"
+                />
+              </div>
             </div>
-            <div class="input-group">
-              <label class="input-group__label" for="email"
-                >Email address
-              </label>
-              <input
-                class="input-group__input"
-                type="email"
-                name="email"
-                id="email"
-              />
+            <div class="contact__right-group">
+              <div class="input-group">
+                <label class="input-group__label" for="body">Message</label>
+                <textarea
+                  class="input-group__input input-group__input--text-area"
+                  name="body"
+                  id="body"
+                  cols="30"
+                  rows="10"
+                ></textarea>
+              </div>
+              <input type="button" value="Submit" class="button contact__btn" />
             </div>
-            <div class="input-group">
-              <label class="input-group__label" for="body">Message</label>
-              <textarea
-                class="input-group__input input-group__input--text-area"
-                name="body"
-                id="body"
-                cols="30"
-                rows="10"
-              ></textarea>
-            </div>
-            <input type="button" value="Submit" class="button contact__btn" />
           </form>
         </div>
       </section>
