@@ -10,7 +10,6 @@ function toggleMenu({ state, button, menu, menu_items }) {
       state = true;
     }
   });
-  console.log(menu_items);
   Array.from(menu_items).forEach((item) => {
     item.addEventListener("click", () => {
       button.classList.remove("menu-btn--open");
