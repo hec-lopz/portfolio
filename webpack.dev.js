@@ -1,5 +1,4 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path");
 
 module.exports = {
@@ -9,7 +8,7 @@ module.exports = {
     // filename: "[name].",
     // publicPath: "/assets/",
   },
-  mode: "production",
+  mode: "development",
   module: {
     rules: [
       {
@@ -36,7 +35,7 @@ module.exports = {
       // },
       {
         test: /\.styl$/i,
-        use: [MiniCssExtractPlugin.loader, "css-loader", "stylus-loader"],
+        use: ["style-loader", "css-loader", "stylus-loader"],
       },
     ],
   },
@@ -45,6 +44,5 @@ module.exports = {
       template: "src/index.html",
       filename: "index.html",
     }),
-    new MiniCssExtractPlugin(),
   ],
 };
