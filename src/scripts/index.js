@@ -1,4 +1,5 @@
 import toggleMenu from "./toggleMenu.js";
+import "../stylus/main.styl";
 
 let menuOpen = false;
 const $menu_btn = document.querySelector(".mobile-btn");
