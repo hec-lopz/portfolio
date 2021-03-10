@@ -406,7 +406,13 @@
       <section class="contact" id="contact">
         <div class="contact__container container">
           <h1 class="section-title">Contact me</h1>
-          <form action="" class="contact__form" netlify>
+          <form
+            action=""
+            name="contact"
+            class="contact__form"
+            method="POST"
+            netlify
+          >
             <div class="contact__left-group">
               <div class="input-group">
                 <label class="input-group__label" for="name">Name</label>
@@ -443,7 +449,7 @@
                   autocomplete="off"
                 ></textarea>
               </div>
-              <input type="button" value="Submit" class="button contact__btn" />
+              <button type="submit" class="button contact__btn">Submit</button>>
             </div>
           </form>
         </div>
