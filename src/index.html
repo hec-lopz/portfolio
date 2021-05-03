@@ -8,8 +8,9 @@
       src="https://kit.fontawesome.com/7414bc46c0.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Raleway:wght@700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/normalize.css" />
@@ -18,30 +19,58 @@
     <title>hec_lopz</title>
   </head>
   <body>
-    <nav class="mobile-nav">
+    <!-- <nav class="mobile-nav">
       <ul class="mobile-nav__list">
         <li class="mobile-nav__item"><a href="#home">Home</a></li>
         <li class="mobile-nav__item"><a href="#projects">Projects</a></li>
         <li class="mobile-nav__item"><a href="#contact">Contact</a></li>
       </ul>
-    </nav>
-    <button class="mobile-btn">
-      <div class="menu-btn">
-        <div class="menu-btn__burger"></div>
-      </div>
-    </button>
+    </nav> -->
+
     <header class="header" id="home">
       <div class="container header__container">
         <figure class="header__logo">
-          <img class="header__img" src="assets/hec_lopz-logo.svg" alt="" />
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1486.13 533.7">
+            <defs>
+              <style>
+                .cls-1,
+                .cls-2 {
+                  fill: #2d132c;
+                }
+                .cls-2 {
+                  font-size: 200px;
+                  font-family: FiraCode-Regular, Fira Code;
+                }
+              </style>
+            </defs>
+            <g id="Capa_2" data-name="Capa 2">
+              <g id="Capa_1-2" data-name="Capa 1">
+                <path
+                  class="cls-1"
+                  d="M260.74,0C116.74,0,0,116.74,0,260.74S116.74,521.48,260.74,521.48,521.48,404.75,521.48,260.74,404.75,0,260.74,0ZM201.32,185.31H140.39v81H100.21V64.1h40.18v81h60.93ZM280,457.39H239.78V64.1H280Zm141.31,0H320.16V417.2H421.28Z"
+                />
+                <text class="cls-2" transform="translate(569.36 256.59)">
+                  hec_
+                </text>
+                <text class="cls-2" transform="translate(993.83 440.14)">
+                  lopz
+                </text>
+              </g>
+            </g>
+          </svg>
         </figure>
-        <nav class="header__nav">
+        <button class="mobile-btn">
+          <div class="menu-btn">
+            <div class="menu-btn__burger"></div>
+          </div>
+        </button>
+        <nav class="header__nav mobile-nav">
           <ul class="header__btns-container">
-            <li class="button header__btn">
-              <a class="button" href="#projects">Proyectos</a>
+            <li class="header__btn">
+              <a class="" href="#projects">Proyectos</a>
             </li>
-            <li class="button header__btn">
-              <a class="button" href="#contact">Contáctame</a>
+            <li class="header__btn">
+              <a class="" href="#contact">Contáctame</a>
             </li>
           </ul>
         </nav>
@@ -50,61 +79,18 @@
     <main>
       <section class="hero">
         <div class="hero__container container">
-          <figure class="hero__photo">
-            <img
-              src="assets/photo@200px.jpg"
-              alt="heclopz photo"
-              srcset="
-                ./assets/photo@200px.jpg 200w,
-                ./assets/photo@350px.jpg 350w,
-                ./assets/photo@460px.jpg 460w
-              "
-              sizes="
-                ((min-width: 600px) and (max-width: 767px)) 187px,
-                ((min-width: 768px) and (max-width:1023px)) 251px,
-                (min-width: 1024px) 460px, 
-                150px"
-              class="hero__img img"
-            />
-          </figure>
-          <div class="hero__about-me">
-            <h1 class="hero__name">
-              <span>Héctor Eduardo </span><span>López Carballo</span>
+          <div class="hero__headline">
+            <h1 class="hero__title">
+              Hi there! My name is <em>Héctor López.</em>
             </h1>
 
-            <p class="hero__description">
-              Passionate about technology and self-taught programmer. I'm eager
-              to learn something new every day. Messing-up with computers made
-              grow my interest in crafting software.
+            <p class="hero__copy">
+              I'm a <em>Frontend Developer</em> with experience building dynamic
+              and static web pages using <em>HTML, CSS and JavaScript.</em>
             </p>
-            <p class="hero__description">
-              I am a very friendly person and I really enjoy teamwork, sharing
-              my knowledge and learning from my co-workers is my best attribute.
-              I'm driven by integrity and empathy.
-            </p>
-            <p class="hero__description">
-              I'm proficient in frontend development using vanilla Javascript,
-              but I enjoy using React as well. I would like to grow my
-              programming skills doing backend development with C# and .Net or
-              NodeJS.
-            </p>
-            <ul class="hero__social-media social-media">
-              <li class="hero__link">
-                <a target="blank" href="https://github.com/hec-lopz">
-                  <i class="fab fa-github"></i>
-                </a>
-              </li>
-              <li class="hero__link">
-                <a target="blank" href="https://twitter.com/hec_lopz">
-                  <i class="fab fa-twitter"></i>
-                </a>
-              </li>
-              <li class="hero__link">
-                <a target="blank" href="https://www.linkedin.com/in/hec-lopz/">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-              </li>
-            </ul>
+            <figure class="hero__photo">
+              <img src="./assets/undraw_developer_activity_bv83.svg" />
+            </figure>
           </div>
         </div>
       </section>

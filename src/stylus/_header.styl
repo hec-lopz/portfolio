@@ -1,53 +1,88 @@
 .header
-  background-color $color-secondary
+  position sticky
+  z-index 10
+  top 0
+  background-color alpha($color-gray, .95)
+  width 100vw
+  
   @media(min-width:1280px)
-    padding-top 10px
+    padding 0
   &__container
     display flex
-    justify-content center 
+    justify-content space-between 
     align-items center
-    padding 5px 0
-    position relative
-    @media(min-width 1280px)
-      justify-content space-between
+    padding-top 1.5rem
+    padding-bottom 1.5rem
+    cursor pointer
+    max-width unset
+    @media(min-width:1280px)
+      // max-width 1100px
+      margin auto
+      padding 2rem 0
+
+
   
 
   &__logo
-    width 125px
+    width 4.4rem
+    overflow: hidden
+    @media(min-width:1280px)
+      width auto
+    & svg
+      width 12.5rem
 
   &__img
     width 100%
 
   &__nav
-    display none
+    background-color alpha($color-gray, .95)
+    display flex
+    justify-content flex-end
+    position absolute
+    left -2rem
+    right -2rem
+    bottom -81px
+    padding 2rem 4rem
+    transform scaleY(0)
+    transform-origin top center
 
     @media(min-width 1280px)
-      display block
+      position static
+      transform scaleY(1)
+      flex-direction row
+      padding 0
+
+    &--open
+      transform scaleY(1)
+
+
   &__btns-container
-    display flex
-    width 250px
+    text-align right
+    display inline-flex
+    flex-direction column
+    font-size $font-size-actions
+    color $color-secondary
+    font-weight bold
+    @media(min-width 1280px)
+      flex-direction row
+
+
+  
   &__btn
     // text-transform uppercase
   &__btn + &__btn
-    margin-left 10px
+    @media(min-width 1280px)
+      margin-left 40px
 
+
+// .header:hover .header__nav
+//   transition .25s ease-in transform
 
 .mobile-btn
-  width 5rem
-  height 5rem
-  // width 5rem
-  // height 5rem
-  // display grid
-  // place-items center
+  padding 2rem 1rem
   display flex
   align-items center
   justify-content center
-  position fixed
-  border-radius 50%
-  right 1rem
-  top .3rem
-  z-index 10
-  background $color-secondary
   @media(min-width 1280px)
     display none
   &--scrolled
@@ -61,32 +96,32 @@
 
 
   
-.mobile-nav
-  display flex
-  justify-content center
-  color $color-white
-  font-size $font-size-h1
-  position fixed
-  width 100vw
-  height 100vh
-  background-color $color-primary
-  // left 0
-  right -@width
-  opacity 0
-  top 0
-  bottom 0
-  z-index 10
-  transition all .5s ease
-  text-align center
-  &__list
-    display flex
-    justify-content center
-    flex-direction column
-  &__item
-    font-size 36px
-    & + & 
-      margin-top 40px
+// .mobile-nav
+//   display flex
+//   justify-content center
+//   color $color-primary
+//   font-size $font-size-h1
+//   position fixed
+//   width 100vw
+//   height 25rem
+//   background-color $color-gray
+//   // left 0
+//   right 0
+//   opacity 1
+//   // top 0
+//   bottom 0
+//   z-index 10
+//   transition all .5s ease
+//   text-align center
+//   &__list
+//     display flex
+//     justify-content center
+//     flex-direction column
+//   &__item
+//     font-size 36px
+//     & + & 
+//       margin-top 40px
 
-  &--open
-    right   0
-    opacity 1
+//   &--open
+//     right   0
+//     opacity 1
