@@ -1,73 +1,114 @@
 .hero
-  // max-width 320px
-  height calc(100vh - 96px)
-  min-height 55rem
+  min-height calc(100vh - 88px)
+  // min-height 55rem
   margin auto
-  // background-color $color-secondary
-  padding $padding
-  color $color-primary
-  display flex
-  // flex-direction column
-  justify-content  center
-  @media(min-width:768px)
-    align-items center
-    min-height 80rem
-  @media(min-width:1024px)
-    min-height 90rem
+  color $color-secondary
+  @media screen and (min-width: 1280px)
+    align-items stretch
+    display flex
+
+
   &__container
+    margin-top 2rem
     padding 0
-    @media(min-width:768px)
-      max-width 450px
-      margin-top -100px
+    @media screen and (min-width:768px)
+      padding 0 2rem
+    @media screen and (min-width: 1280px)
+      display flex
+      padding 0
+      // height 100%
+
+
   
   &__photo
-    width 150px
-    height @width
-    overflow hidden
-    border-radius 50%
-    margin 0 auto
-    @media(min-width:768px)
-      width 350px
-      height @width
-    @media(min-width:1024px)
-      width 460px
-      height @width
+    min-width 450px
+    width 100%
+    max-width 90rem
+    @media screen and (min-width:768px)
+      margin 2rem 0
+    @media screen and (min-width:1280px)
+      width: 900px;
+      margin-left: -400px;
+      // margin-left: -50px;
+      align-self: flex-end;
+      flex-shrink: 0;
 
-    // @media screen and (min-width: 768px)
-    //   width 250px
-    //   height @width
   &__img
-    object-position right
-    object-fit cover
+    object-position left
+    object-fit contain
 
   &__headline
-    display flex
-    align-items  center
-    // justify-content space-between
+    width 100%
+    overflow hidden
+    min-width 0
     flex-direction column
-    height 80%
+    padding 0 2rem
+    position: relative;
+    z-index: 2;
+
     @media(min-width:768px)
+      padding 0
       padding-top 20px
-    
+      margin-bottom 5rem
+    @media screen and (min-width: 1280px)
+      background: rgba(227,227,227,0.95);
+      align-self: flex-start;
+
+  
+  &__em
+    color $color-primary
   &__title
-    font-size 2.8rem
-    text-align center
-    margin 10px 0
-    display flex
-    flex-direction column
-    @media(min-width:768px)
-      // display block
+    font-size 2.4rem
+    margin 0
+    @media screen and (min-width:768px)
+      font-size 3.2rem
+
   &__copy
-    margin 10px 0
-    font-size 14px
-    text-align justify
+    margin 4rem 0
+    font-size 2.6rem
+    margin-bottom 7rem
+    font-family $font-titles
+    font-weight bold
+    @media screen and (min-width:768px)
+      font-size 4.2rem
+      line-height 4.9rem
+      margin 0
+      margin-top 1rem
+
   &__social-media
-    // margin-top $box-margin
     @media(min-width:768px)
       margin-top 30px
-    @media(min-width:1024px)
-      // margin-top 50px
-  &__link
+  &__link 
     font-size 3rem
     & + &
       margin-left $box-margin
+
+
+
+@media screen and (min-width: 1420px)
+  .hero__container
+    max-height 80rem
+    margin-top 5rem
+  
+  .hero__headline {
+    flex-basis: 700px;
+    flex-shrink: 1;
+    flex-grow: 1;
+  }
+
+
+  .hero__photo {
+    flex-grow: 2;
+  }
+
+
+
+  .hero__photo {
+    margin-left: -100px;
+    margin-right: -150px;
+  }
+
+  .hero__headline {
+    background: rgba(227,227,227,0.95);
+    align-self: flex-start;
+  }
