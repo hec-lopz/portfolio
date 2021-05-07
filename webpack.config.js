@@ -10,6 +10,9 @@ module.exports = {
     // publicPath: "/assets/",
   },
   mode: "production",
+  resolve: {
+    extensions: [".js"],
+  },
   module: {
     rules: [
       {

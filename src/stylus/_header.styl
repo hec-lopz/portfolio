@@ -3,17 +3,18 @@
   z-index 10
   top 0
   background-color alpha($color-gray, .95)
-  width 100vw
+  // width 100vw
   
   @media(min-width:1280px)
     padding 0
+    width unset
   &__container
     display flex
     justify-content space-between 
     align-items center
     padding-top 1.5rem
     padding-bottom 1.5rem
-    cursor pointer
+    // cursor pointer
     // max-width unset
     @media(min-width:1280px)
       // max-width 1100px
@@ -41,7 +42,7 @@
     position absolute
     left -2rem
     right -2rem
-    bottom -81px
+    bottom -122.3px
     padding 2rem 4rem
     transform scaleY(0)
     transform-origin top center
@@ -51,6 +52,8 @@
       transform scaleY(1)
       flex-direction row
       padding 0
+      background-color unset
+
 
     &--open
       transform scaleY(1)
@@ -63,6 +66,7 @@
     font-size $font-size-actions
     color $color-secondary
     font-weight bold
+    align-items space-between
     @media(min-width 1280px)
       flex-direction row
 
@@ -71,7 +75,9 @@
   &__btn
     // text-transform uppercase
   &__btn + &__btn
+    margin-top 10px
     @media(min-width 1280px)
+      margin-top 0
       margin-left 40px
 
 
@@ -83,6 +89,7 @@
   display flex
   align-items center
   justify-content center
+  cursor pointer
   @media(min-width 1280px)
     display none
   &--scrolled

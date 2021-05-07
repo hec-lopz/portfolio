@@ -29,7 +29,7 @@
 
     <header class="header" id="home">
       <div class="container header__container">
-        <figure class="header__logo">
+        <a class="header__logo" href="#" alt="Home">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1486.13 533.7">
             <defs>
               <style>
@@ -58,7 +58,7 @@
               </g>
             </g>
           </svg>
-        </figure>
+        </a>
         <button class="mobile-btn">
           <div class="menu-btn">
             <div class="menu-btn__burger"></div>
@@ -70,7 +70,10 @@
               <a class="" href="#projects">Proyectos</a>
             </li>
             <li class="header__btn">
-              <a class="" href="#contact">Contáctame</a>
+              <a class="" href="#about-me">About me</a>
+            </li>
+            <li class="header__btn">
+              <a class="" href="#contact">Contact me</a>
             </li>
           </ul>
         </nav>
@@ -109,13 +112,16 @@
                 <div class="technologies card__technologies">
                   <ul class="technologies__list">
                     <li class="technologies__item">
-                      <i class="fab fa-js-square"></i>
+                      <span class="technologies__tooltip">JavaScript</span>
+                      <i class="technologies__icon fab fa-js-square"></i>
                     </li>
                     <li class="technologies__item">
-                      <i class="fab fa-css3-alt"></i>
+                      <span class="technologies__tooltip">CSS</span>
+                      <i class="technologies__icon fab fa-css3-alt"></i>
                     </li>
                     <li class="technologies__item">
-                      <i class="fab fa-html5"></i>
+                      <span class="technologies__tooltip">HTML5</span>
+                      <i class="technologies__icon fab fa-html5"></i>
                     </li>
                   </ul>
                 </div>
@@ -150,6 +156,66 @@
                 </div>
               </div>
             </article>
+            <!-- Typemaster -->
+            <article class="card">
+              <div class="card__header">
+                <h2 class="card__title">Typemaster Landing</h2>
+                <div class="technologies card__technologies">
+                  <ul class="technologies__list">
+                    <li class="technologies__item">
+                      <span class="technologies__tooltip">Webpack</span>
+                      <svg
+                        class="technologies__icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 128 128"
+                      >
+                        <path
+                          fill="#1c78c0"
+                          d="M117.29 98.1L66.24 127V104.49L98 87 117.29 98.1zm3.5-3.16V34.55L102.11 45.35V84.16l18.67 10.77zM10.71 98.1l51 28.88V104.49L29.94 87zm-3.5-3.16V34.55L25.89 45.35V84.16zm2.19-64.3L61.76 1V22.76L28.21 41.21l-.27.15zm109.18 0L66.24 1V22.76L99.79 41.2l.27.15 18.54-10.71zM61.76 99.37L30.37 82.1V47.92L61.76 66zm4.48 0L97.63 82.12V47.92L66.24 66zM32.5 44L64 26.66 95.5 44 64 62.16 32.5 44z"
+                        />
+                      </svg>
+                    </li>
+                    <li class="technologies__item">
+                      <span class="technologies__tooltip">CSS</span>
+                      <i class="technologies__icon fab fa-css3-alt"></i>
+                    </li>
+                    <li class="technologies__item">
+                      <span class="technologies__tooltip">HTML5</span>
+                      <i class="technologies__icon fab fa-html5"></i>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <figure class="card__fig">
+                <img
+                  class="card__img img"
+                  src="./assets/typemaster-project.jpg"
+                  alt="Vista Previa de Platzi Video"
+                />
+              </figure>
+              <div class="card__body">
+                <p class="card__description">
+                  Responsive landing page with CSS grid and flexbox. It was
+                  packaged with webpack for optimization.
+                </p>
+                <div class="card__links">
+                  <a
+                    target="blank"
+                    href="https://hec-lopz.github.io/typemaster-landing-page/"
+                    class="button card__btn card__btn--project"
+                  >
+                    View project
+                  </a>
+                  <a
+                    target="blank"
+                    href="https://github.com/hec-lopz/typemaster-landing-page"
+                    class="button card__btn card__btn--git"
+                  >
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
             <!-- Four cards section -->
             <article class="card">
               <div class="card__header">
@@ -157,13 +223,16 @@
                 <div class="technologies card__technologies">
                   <ul class="technologies__list">
                     <li class="technologies__item">
-                      <i class="fab fa-css3-alt"></i>
+                      <span class="technologies__tooltip">CSS</span>
+                      <i class="technologies__icon fab fa-css3-alt"></i>
                     </li>
                     <li class="technologies__item">
-                      <i class="fab fa-html5"></i>
+                      <span class="technologies__tooltip">HTML5</span>
+                      <i class="technologies__icon fab fa-html5"></i>
                     </li>
                     <li class="technologies__item">
-                      <i class="fab fa-grunt"></i>
+                      <span class="technologies__tooltip">Grunt</span>
+                      <i class="technologies__icon fab fa-grunt"></i>
                     </li>
                   </ul>
                 </div>
@@ -205,13 +274,16 @@
                 <div class="technologies card__technologies">
                   <ul class="technologies__list">
                     <li class="technologies__item">
-                      <i class="fab fa-css3-alt"></i>
+                      <span class="technologies__tooltip">CSS</span>
+                      <i class="technologies__icon fab fa-css3-alt"></i>
                     </li>
                     <li class="technologies__item">
-                      <i class="fab fa-html5"></i>
+                      <span class="technologies__tooltip">HTML5</span>
+                      <i class="technologies__icon fab fa-html5"></i>
                     </li>
                     <li class="technologies__item">
-                      <i class="fab fa-grunt"></i>
+                      <span class="technologies__tooltip">Grunt</span>
+                      <i class="technologies__icon fab fa-grunt"></i>
                     </li>
                   </ul>
                 </div>
@@ -253,13 +325,16 @@
                 <div class="technologies card__technologies">
                   <ul class="technologies__list">
                     <li class="technologies__item">
-                      <i class="fab fa-js-square"></i>
+                      <span class="technologies__tooltip">JavaScript</span>
+                      <i class="technologies__icon fab fa-js-square"></i>
                     </li>
                     <li class="technologies__item">
-                      <i class="fab fa-css3-alt"></i>
+                      <span class="technologies__tooltip">CSS</span>
+                      <i class="technologies__icon fab fa-css3-alt"></i>
                     </li>
                     <li class="technologies__item">
-                      <i class="fab fa-html5"></i>
+                      <span class="technologies__tooltip">HTML5</span>
+                      <i class="technologies__icon fab fa-html5"></i>
                     </li>
                   </ul>
                 </div>
@@ -301,13 +376,16 @@
                 <div class="technologies card__technologies">
                   <ul class="technologies__list">
                     <li class="technologies__item">
-                      <i class="fab fa-js-square"></i>
+                      <span class="technologies__tooltip">JavaScript</span>
+                      <i class="technologies__icon fab fa-js-square"></i>
                     </li>
                     <li class="technologies__item">
-                      <i class="fab fa-css3-alt"></i>
+                      <span class="technologies__tooltip">CSS</span>
+                      <i class="technologies__icon fab fa-css3-alt"></i>
                     </li>
                     <li class="technologies__item">
-                      <i class="fab fa-html5"></i>
+                      <span class="technologies__tooltip">HTML5</span>
+                      <i class="technologies__icon fab fa-html5"></i>
                     </li>
                   </ul>
                 </div>
@@ -342,120 +420,117 @@
                 </div>
               </div>
             </article>
-            <!-- Platzi Video -->
-            <article class="card">
-              <div class="card__header">
-                <h2 class="card__title">Article Preview Component</h2>
-                <div class="technologies card__technologies">
-                  <ul class="technologies__list">
-                    <li class="technologies__item">
-                      <i class="fab fa-js-square"></i>
-                    </li>
-                    <li class="technologies__item">
-                      <i class="fab fa-css3-alt"></i>
-                    </li>
-                    <li class="technologies__item">
-                      <i class="fab fa-html5"></i>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <figure class="card__fig">
-                <img
-                  class="card__img img"
-                  src="./assets/platzivideo.jpg"
-                  alt="Vista Previa de Platzi Video"
-                />
-              </figure>
-              <div class="card__body">
-                <p class="card__description">
-                  Movies listing that get info from an API, the elements are
-                  generated dynamically with vanilla JavaScript
-                </p>
-                <div class="card__links">
-                  <a
-                    target="blank"
-                    href="https://hec-lopz.github.io/platziVideoV2/"
-                    class="button card__btn card__btn--project"
-                  >
-                    View project
-                  </a>
-                  <a
-                    target="blank"
-                    href="https://github.com/hec-lopz/platziVideoV2"
-                    class="button card__btn card__btn--git"
-                  >
-                    <i class="fab fa-github"></i>
-                  </a>
-                </div>
-              </div>
-            </article>
           </div>
         </div>
+      </section>
+      <section id="about-me" class="about-me">
+        <div class="container about-me__container">
+          <h1 class="section-title">About me</h2>
+            <div class="about-me__content">
+              <div class="about-me__copy">
+                <p >
+                  Passionate about technology and self-taught programmer. I'm eager to learn something new every day. Messing-up with computers made grow my interest in crafting software.
+                </p>
+                <p >
+                  I am a very friendly person and I really enjoy teamwork, sharing my knowledge and learning from my co-workers is my best attribute. I'm driven by integrity and empathy.
+                </p>
+                <p >
+                  I'm proficient in frontend development using vanilla Javascript, but I enjoy using React as well. <br> I would like to grow my programming skills doing backend development with C# and .Net or NodeJS.
+                </p>
+  
+              </div>
+              <figure class="about-me__photo">
+                <picture>
+                  <source media="(min-width: 1280px)" srcset="./assets/pic@434.jpg">
+                  <source media="(min-width: 768px)" srcset="./assets/pic@310.jpg">
+                  <img class="img" src="./assets/pic@285.jpg" alt="">
+                </picture>
+              </figure>
+
+            </div>
+
+         
+        </div>
+
       </section>
       <section class="contact" id="contact">
         <div class="contact__container container">
           <h1 class="section-title">Contact me</h1>
-          <form
-            action=""
-            name="contact"
-            class="contact__form"
-            method="POST"
-            netlify
-          >
-            <div class="contact__left-group">
-              <div class="input-group">
-                <label class="input-group__label" for="name">Name</label>
-                <input
-                  class="input-group__input"
-                  id="name"
-                  name="name"
-                  type="text"
-                  autocomplete="name"
-                />
-              </div>
-              <div class="input-group">
-                <label class="input-group__label" for="email"
-                  >Email address
-                </label>
-                <input
-                  class="input-group__input"
-                  type="email"
-                  name="email"
-                  id="email"
-                  autocomplete="email"
-                />
-              </div>
+          <div class="contact__content">
+            <div class="contact__social-media-container">
+              <p class="contact__cta">Send me a message on my social media.</p>
+                <ul class="contact__social-media social-media">
+                  <li class="contact__link social-media__link">
+                    <a href="https://github.com/hec-lopz" target="_blank" rel="noopener noreferrer">
+                      <i class="fab fa-github"></i>
+                    </a>
+                  </li>
+                  <li class="contact__link social-media__link">
+                    <a href="https://www.linkedin.com/in/hec-lopz/" target="_blank" rel="noopener noreferrer">
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                  </li>
+                  <li class="contact__link social-media__link">
+                    <a href="https://twitter.com/hec_lopz" target="_blank" rel="noopener noreferrer">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                  </li>
+                </ul>
             </div>
-            <div class="contact__right-group">
-              <div class="input-group">
-                <label class="input-group__label" for="body">Message</label>
-                <textarea
-                  class="input-group__input input-group__input--text-area"
-                  name="body"
-                  id="body"
-                  cols="30"
-                  rows="10"
-                  autocomplete="off"
-                ></textarea>
-              </div>
-              <button type="submit" class="button contact__btn">Submit</button>
+            <span class="contact__separator">or</span>
+            <div class="contact__form-container">
+              <p class="contact__cta">Leave your info and I'll contact you back.</p>
+              <form
+                action=""
+                name="contact"
+                class="contact__form"
+                method="POST"
+                netlify
+              >
+                
+                  <div class="input-group">
+                    <label class="input-group__label" for="name">Name</label>
+                    <input
+                      class="input-group__input"
+                      id="name"
+                      name="name"
+                      type="text"
+                      autocomplete="name"
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label class="input-group__label" for="email"
+                      >Email address
+                    </label>
+                    <input
+                      class="input-group__input"
+                      type="email"
+                      name="email"
+                      id="email"
+                      autocomplete="email"
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label class="input-group__label" for="body">Message</label>
+                    <textarea
+                      class="input-group__input input-group__input--text-area"
+                      name="body"
+                      id="body"
+                      cols="30"
+                      rows="10"
+                      autocomplete="off"
+                    ></textarea>
+                  </div>
+                  <button type="submit" class="button contact__btn">Submit</button>
+              </form>
+
             </div>
-          </form>
+          </div>
         </div>
       </section>
     </main>
-    <footer class="footer container">
-      <small class="footer__text"
-        >Designed and developed with 💜 by
-        <a
-          class="footer__link"
-          href="https://twitter.com/hec_lopz"
-          target="blank"
-          >@hec_lopz</a
-        ></small
-      >
-      <small class="footer__text"
+    <footer class="footer">
+      <p class="footer__text"
         >©2021 Héctor Eduardo López Carballo. All rights reserved.</small
       >
     </footer>

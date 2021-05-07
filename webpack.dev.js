@@ -9,6 +9,9 @@ module.exports = {
     // publicPath: "/assets/",
   },
   mode: "development",
+  resolve: {
+    extensions: [".js"],
+  },
   module: {
     rules: [
       {

@@ -4,12 +4,13 @@
 *************/
 $color-primary = #2d132c
 $color-primary-hover = #4A2E49
+$color-btn = #EBDAEA
 
 $color-secondary = #c72c41
 $color-bg = #715670
 $color-bg-light = #b79eb6
 $color-black = #160104
-$color-white = #dbdbdb
+$color-white = #F8F8FF
 $color-gray = #E3E3E3
 $color-gray-light = #a79da6
 /*************\
@@ -20,7 +21,7 @@ $font-titles = "Raleway", sans-serif
 $font-size-h1 = 2.7rem
 $font-size-h2 = 2.4rem
 $font-size-h3 = 2rem
-$font-size-p = 1.8rem
+$font-size-p = 1.6rem
 $font-size-actions = 1.8rem
 $font-size-small = 1.2rem
 /*************\
@@ -43,6 +44,7 @@ html
 body
   font-family: $font-normal
   background-color $color-gray
+  color $color-primary
   // overflow hidden
 
 h1,h2,h3
@@ -60,6 +62,10 @@ h3
 p
   font-size $font-size-p
   letter-spacing .015em
+  line-height 2.2rem
+  margin 0
+p + p
+  margin 1.6rem 0
 small
   font-size $font-size-small
   letter-spacing .015em
@@ -76,13 +82,12 @@ em
 a
   text-decoration: none
   color: inherit
+  font-size inherit
 input
   border none
-p
-  line-height 2.2rem
 
 [data-prefix="fas"], [data-prefix="fab"]
-  color $color-white
+  color inherit
   // font-size 2.5rem
 
 button
@@ -97,6 +102,8 @@ button
 
 .section-title
   margin-top 0
+  color $color-secondary
+  margin-bottom 5rem
 
 .button
   display flex
@@ -104,8 +111,8 @@ button
   align-items center
   width 100%
   height 40px
-  background-color $color-primary
-  color $color-white
+  background-color $color-btn
+  color $color-primary
   border-radius $border-radius
   font-size $font-size-p
   letter-spacing .1em
@@ -114,7 +121,8 @@ button
   text-transform capitalize
   cursor pointer
   &:hover
-    background-color $color-primary-hover
+    background-color #d0a0cd
+    color #170b16
 
 .container
   // max-width $max-width-mobile
@@ -122,12 +130,9 @@ button
   padding 0 $padding
   // width 100%
   @media(min-width: 1280px)
+    padding 0
     // max-width 1100px
     width: 90%
     max-width 1420px
   // @media(min-width: 1920px)
   //   max-width 1100px
-.social-media
-  height 3rem
-  margin auto 0
-  display flex

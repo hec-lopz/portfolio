@@ -1,0 +1,81 @@
+.contact
+  padding 5rem 0
+  @media screen and (min-width: 1280px)
+    padding 15rem 0
+  &__container
+    @media(min-widht:1280px)
+      // max-width 640px
+  &__content
+    display flex
+    flex-direction column
+    // flex-wrap wrap
+    align-items center
+    @media screen and (min-width: 1024px)
+      flex-direction row
+      justify-content space-between
+      align-items flex-start
+
+  &__cta
+    margin-bottom 5rem 
+      
+
+
+  // &__social-media-container
+    // flex-basis 41
+  &__social-media
+    color $color-white
+    line-height 0
+    display inline-flex
+  &__link
+    border-radius 50%
+    background $color-primary
+    padding 1rem
+    font-size 3rem
+    & svg
+      width 1em !important
+    & + & 
+      margin-left 2rem
+
+  &__separator
+    font-size 2rem
+    font-weight bold
+    margin 5rem 0
+    display block
+    align-self center
+    @media screen and (min-width: 1024px)
+      margin 0
+  &__form-container
+    flex-grow 1
+    max-width 49rem
+  
+  &__btn
+    margin-top 10px
+
+
+
+  
+
+.input-group 
+  display flex
+  flex-direction column
+  font-size $font-size-p
+  &__label
+    font-size $font-size-p
+  &__input
+    background-color $color-white
+    border none
+    border-radius 10px
+    padding 5px 10px
+    font-size inherit
+    color $color-black
+    &--text-area
+      // max-width 360px
+      resize none
+      @media(min-width:1280px)
+        height 85px
+  &__label + &__input
+    margin-top 10px
+  & + & 
+    margin-top 10px
+
+    

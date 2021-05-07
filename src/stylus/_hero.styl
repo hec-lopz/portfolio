@@ -1,6 +1,6 @@
 .hero
   min-height calc(100vh - 88px)
-  // min-height 55rem
+  overflow hidden
   margin auto
   color $color-secondary
   @media screen and (min-width: 1280px)
@@ -75,32 +75,27 @@
       margin 0
       margin-top 1rem
 
-  &__social-media
-    @media(min-width:768px)
-      margin-top 30px
-  &__link 
-    font-size 3rem
-    & + &
-      margin-left $box-margin
 
 
 
 @media screen and (min-width: 1420px)
-  .hero__container
-    max-height 80rem
-    margin-top 5rem
-  
-  .hero__headline {
-    flex-basis: 700px;
-    flex-shrink: 1;
-    flex-grow: 1;
-    background: rgba(227,227,227,0.95);
-    align-self: flex-start;
-  }
+  .hero
+    align-items center
+    &__container
+      height 80rem
+      margin-top 5rem
+    
+    &__headline 
+      flex-basis 700px
+      flex-shrink 1
+      flex-grow 1
+      background rgba(227,227,227,0.95)
+      align-self flex-start
+    
 
 
-  .hero__photo {
-    flex-grow: 2;
-    margin-left: -100px;
-    margin-right: -150px;
-  }
+    &__photo 
+      flex-grow 2
+      margin-left -100px
+      margin-right -150px
+    
