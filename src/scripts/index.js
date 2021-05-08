@@ -30,4 +30,4 @@ window.addEventListener("load", () => {
 });
 
 resizeViewport();
-window.addEventListener("resize", debounce(resizeViewport, 100));
+window.addEventListener("resize", debounce(resizeViewport, 250));
