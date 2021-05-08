@@ -3,4 +3,5 @@ export const resizeViewport = () => {
   const root = document.documentElement;
   let vh = window.innerHeight * 0.01;
   root.style.setProperty("--vh", `${vh}px`);
+  console.log("resized");
 };

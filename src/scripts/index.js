@@ -2,6 +2,7 @@ import toggleMenu from "./toggleMenu.js";
 import "../stylus/main.styl";
 import Card from "./Card";
 import { resizeViewport } from "./resizeViewport";
+const debounce = require("lodash/debounce");
 
 let menuOpen = false;
 const $menu_btn = document.querySelector(".mobile-btn");
@@ -29,4 +30,4 @@ window.addEventListener("load", () => {
 });
 
 resizeViewport();
-window.addEventListener("resize", resizeViewport);
+window.addEventListener("resize", debounce(resizeViewport, 100));
