@@ -1,6 +1,7 @@
 import toggleMenu from "./toggleMenu.js";
 import "../stylus/main.styl";
 import Card from "./Card";
+import { resizeViewport } from "./resizeViewport";
 
 let menuOpen = false;
 const $menu_btn = document.querySelector(".mobile-btn");
@@ -17,7 +18,6 @@ toggleMenu({
 
 window.addEventListener("load", () => {
   $menu_modal.setAttribute("style", "transition: .25s ease-in transform");
-  console.log("loaded");
   $menu_btn
     .querySelector(".menu-btn__burger")
     .setAttribute("style", "transition: all .5s ease;");
@@ -28,4 +28,5 @@ window.addEventListener("load", () => {
   });
 });
 
-console.log(Card());
+resizeViewport();
+window.addEventListener("resize", resizeViewport);
