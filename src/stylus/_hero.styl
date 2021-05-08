@@ -2,19 +2,25 @@
   min-height calc(100vh - 88px)
   overflow hidden
   margin auto
-  color $color-secondary
-  @media screen and (min-width: 1280px)
-    align-items stretch
-    display flex
+  color $color-secondary    
+  align-items stretch
+  display flex
+
 
 
   &__container
     margin-top 2rem
     padding 0
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 0;
+    width: 100%;
     @media screen and (min-width:768px)
       padding 0 2rem
+      width 90%
     @media screen and (min-width: 1280px)
-      display flex
       padding 0
       // height 100%
 
@@ -23,14 +29,16 @@
   &__photo
     min-width 450px
     width 100%
-    max-width 90rem
+    max-width 90rem 
+    padding-left 2rem
+    // margin-top 10rem
     @media screen and (min-width:768px)
       margin 2rem 0
+      align-self: flex-end;
     @media screen and (min-width:1280px)
       width: 900px;
       margin-left: -400px;
       // margin-left: -50px;
-      align-self: flex-end;
       flex-shrink: 0;
 
   &__img
@@ -59,14 +67,16 @@
     color $color-primary
   &__title
     font-size 2.4rem
+    line-height 3rem
     margin 0
     @media screen and (min-width:768px)
       font-size 3.2rem
 
   &__copy
-    margin 4rem 0
+    margin-top 1rem
     font-size 2.6rem
-    margin-bottom 7rem
+    line-height 3rem
+    // margin-bottom 7rem
     font-family $font-titles
     font-weight bold
     @media screen and (min-width:768px)
@@ -80,9 +90,13 @@
 
 @media screen and (min-width: 1420px)
   .hero
-    align-items center
+    // align-items center
+    align-items: stretch;
     &__container
-      height 80rem
+      // height 80rem
+      height unset
+      max-height 115rem
+      flex-direction row
       margin-top 5rem
     
     &__headline 
@@ -91,11 +105,35 @@
       flex-grow 1
       background rgba(227,227,227,0.95)
       align-self flex-start
-    
-
-
+  
     &__photo 
       flex-grow 2
-      margin-left -100px
+      margin-left -42rem
       margin-right -150px
+      max-width unset
     
+
+
+// /* Inline #3 | http://127.0.0.1:8080/# */
+
+// .hero__photo {
+//   /* margin-top: 10rem; */
+// }
+
+// /* Element | http://127.0.0.1:8080/# */
+
+// .hero {
+//   display: flex;
+//   align-items: stretch;
+// }
+
+// /* Element | http://127.0.0.1:8080/# */
+
+// .hero__container {
+//   display: flex;
+//   flex-wrap: wrap;
+//   flex-direction: column;
+//   justify-content: space-between;
+//   flex-grow: 0;
+//   width: 100%;
+// }
