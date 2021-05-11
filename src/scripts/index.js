@@ -4,6 +4,10 @@ import Card from "./Card";
 import { resizeViewport } from "./resizeViewport";
 const debounce = require("lodash/debounce");
 
+import { db, storage } from "../firebase/config";
+import { ref } from "firebase/storage";
+import addData from "./addData";
+
 let menuOpen = false;
 const $menu_btn = document.querySelector(".mobile-btn");
 const $menu_modal = document.querySelector(".mobile-nav");
@@ -30,4 +34,16 @@ window.addEventListener("load", () => {
 });
 
 resizeViewport();
-window.addEventListener("resize", debounce(resizeViewport, 300));
+
+const joblistImg = ref(storage, "joblist.jpg");
+console.log(joblistImg);
+const job_lists = {
+  title: "Job listings",
+  description:
+    "List of job positions with filter made with vanilla JavaScript, CSS, HTML, Webpack and BEM.",
+  technologies: ["JavaScript", "css", "HTML5"],
+  live_url: "https://hec-lopz.github.io/job-list/index",
+  gh_url: "https://github.com/hec-lopz/job-list",
+  image: "gs://heclopzportfolio-62d12.appspot.com/joblist.jpg",
+};
+addData(db, job_lists);
