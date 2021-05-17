@@ -78,21 +78,22 @@
     position relative
     a
       padding .5rem 0
-    &::after
-      content ""
-      display inline-block
-      // width 80%
-      position absolute
-      // top 0
-      right .5rem
-      left .5rem
-      bottom -.5rem
-      border .1rem solid $color-secondary
-      transform scale(0)
-      transform-origin center
-      transition 250ms transform ease-in-out
-    &:hover::after 
-      transform scale(1)
+    @media screen and (min-width 1200px)
+      &::after
+        content ""
+        display inline-block
+        // width 80%
+        position absolute
+        // top 0
+        right .5rem
+        left .5rem
+        bottom -.5rem
+        border .1rem solid $color-secondary
+        transform scale(0)
+        transform-origin center
+        transition 250ms transform ease-in-out
+      &:hover::after 
+        transform scale(1)
 
 
   &__btn + &__btn
