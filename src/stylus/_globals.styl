@@ -7,11 +7,12 @@ $color-primary-hover = #4A2E49
 $color-btn = #EBDAEA
 
 $color-secondary = #c72c41
+$color-secondary-hover = #E6838F
 $color-bg = #715670
 $color-bg-light = #b79eb6
 $color-black = #160104
 $color-white = #F8F8FF
-$color-gray = #E3E3E3
+$color-gray = #EAEAEA
 $color-gray-light = #a79da6
 /*************\
 *   Fonts
@@ -124,9 +125,10 @@ button
   font-weight thin
   text-transform capitalize
   cursor pointer
+  transition background-color ease-in 150ms, color ease-in 150ms
   &:hover
-    background-color #d0a0cd
-    color #170b16
+    background-color $color-secondary-hover
+    color $color-primary-hover
 
 .container
   // max-width $max-width-mobile
