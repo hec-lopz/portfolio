@@ -28,6 +28,9 @@
   &__logo
     width 4.4rem
     overflow: hidden
+    &:focus-visible
+      outline .2rem solid $color-secondary
+
     @media(min-width:1280px)
       width auto
     & svg
@@ -78,8 +81,9 @@
     position relative
     a
       padding .5rem 0
+      // outline 0
     @media screen and (min-width 1200px)
-      &::after
+      & a::after
         content ""
         display inline-block
         // width 80%
@@ -92,8 +96,13 @@
         transform scale(0)
         transform-origin center
         transition 250ms transform ease-in-out
-      &:hover::after 
+      & a:hover::after, & a:focus::after
         transform scale(1)
+      & a:focus-visible
+        outline .2rem solid $color-secondary
+      
+
+
 
 
   &__btn + &__btn

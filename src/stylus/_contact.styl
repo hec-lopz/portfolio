@@ -35,14 +35,19 @@
     text-align: center;
     align-self: center;
   &__link
-    border-radius 50%
-    background $color-primary
-    padding 1rem
-    font-size 3rem
-    cursor pointer
-    &:hover
-      background $color-primary-hover
-      transition background 150ms ease-in
+    a
+      border-radius 50%
+      background $color-primary
+      padding 1rem
+      font-size 3rem
+      cursor pointer
+      display inline-block
+      outline 0
+      &:hover
+        background $color-primary-hover
+        transition background 150ms ease-in
+      &:focus-visible
+        box-shadow 0 0 0 .2rem $color-white, 0 0 .5rem .4rem $color-primary
     & svg
       width 1em !important
     & + & 
