@@ -1,5 +1,7 @@
+import "_card.styl"
+
 const Card = () => {
-  return `
+  return (
     <article class="card">
       <div class="card__header">
         <h2 class="card__title">Job listings</h2>
@@ -49,8 +51,7 @@ const Card = () => {
           </a>
         </div>
       </div>
-    </article>
-  `;
+    </article>)
 };
 
 export default Card;

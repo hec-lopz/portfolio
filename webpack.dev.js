@@ -2,7 +2,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 
 module.exports = {
-  entry: "./src/scripts/index.js",
+  entry: "./src/index.js",
   output: {
     path: path.resolve(__dirname, "dist"),
     // filename: "[name].",
@@ -10,17 +10,21 @@ module.exports = {
   },
   mode: "development",
   resolve: {
-    extensions: [".js"],
+    extensions: [".js", ".jsx"],
   },
   module: {
     rules: [
       {
-        test: /\.m?js$/,
+        test: /\.(jsx|js)$/,
         exclude: /(node_modules|bower_components)/,
         use: {
           loader: "babel-loader",
           options: {
-            presets: ["@babel/preset-env"],
+            presets:[ ["@babel/preset-env", {
+              "targets": "defaults"
+            }],
+            "@babel/preset-react"
+          ]
           },
         },
       },
