@@ -1,13 +1,15 @@
 .hero
-  min-height 50rem
+  min-height 60rem
   height 100vh
-  height calc( (var(--vh, 1vh) * 100) - 88px)
+  // height calc( (var(--vh, 1vh) * 100) - 88px)
+  height calc( 100vh - 18.8rem)
   overflow hidden
   margin auto
   color $color-secondary    
   align-items stretch
   display flex
-  transition height 150ms ease-in
+  @media screen and (min-width: 600px)
+    height calc( 100vh - 88px)
 
 
 
@@ -23,6 +25,7 @@
     @media screen and (min-width:768px)
       padding 0 2rem
       width 90%
+      flex-wrap nowrap
     @media screen and (min-width: 1280px)
       padding 0
       // height 100%
@@ -34,6 +37,7 @@
     width 100%
     max-width 90rem 
     padding-left 2rem
+    flex-shrink 0
     // margin-top 10rem
     @media screen and (min-width:768px)
       margin 2rem 0
@@ -53,16 +57,18 @@
     overflow hidden
     min-width 0
     flex-direction column
+    flex-shrink 0
     padding 0 2rem
     position: relative;
     z-index: 2;
+    @media screen and (max-height: 830px)
+      background alpha($color-gray, .9)  
 
     @media(min-width:768px)
       padding 0
       padding-top 20px
       margin-bottom 5rem
     @media screen and (min-width: 1280px)
-      background: rgba(227,227,227,0.95);
       align-self: flex-start;
 
   
@@ -76,7 +82,7 @@
       font-size 3.2rem
 
   &__copy
-    margin-top 1rem
+    margin-top 2rem
     font-size 2.6rem
     line-height 3rem
     // margin-bottom 7rem
@@ -86,7 +92,7 @@
       font-size 4.2rem
       line-height 4.9rem
       margin 0
-      margin-top 1rem
+      margin-top 2rem
 
 
 
@@ -103,10 +109,9 @@
       margin-top 5rem
     
     &__headline 
-      flex-basis 700px
+      flex-basis 60rem
       flex-shrink 1
       flex-grow 1
-      background rgba(227,227,227,0.95)
       align-self flex-start
   
     &__photo 

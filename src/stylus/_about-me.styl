@@ -18,6 +18,25 @@
       margin-bottom 0
       margin-right  2rem
       flex-basis 50%
+      max-width 65rem
+
+  &__skills
+    display flex
+    flex-wrap wrap
+    width 70%
+    justify-content space-between
+    margin 0 auto
+  &__skills-title
+    margin 1rem 0
+    // margin-bottom 1rem
+  &__list
+    // max-width 10rem
+    // margin-right 2rem
+    list-style disc
+    font-size $font-size-p
+  &__item
+    margin .8rem 0
+    margin-left 3rem
 
   &__photo
     max-width 28.5rem
@@ -28,12 +47,15 @@
     border-radius 10px
     overflow hidden
     box-shadow: 0px 0px 15px 2px alpha($color-black, .45);
+    margin-top 2rem
     & .img
       object-fit cover
     // flex-basis 28.5rem
     @media screen and (min-width:768px)
       max-width 31rem
       max-height 39.3rem
+      margin-top 0
+
 
     @media screen and (min-width:1280px)
       max-width 43.4rem

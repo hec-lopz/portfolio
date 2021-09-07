@@ -7,12 +7,15 @@ $color-primary-hover = #4A2E49
 $color-btn = #EBDAEA
 
 $color-secondary = #c72c41
+$color-secondary-hover = #E6838F
 $color-bg = #715670
 $color-bg-light = #b79eb6
 $color-black = #160104
 $color-white = #F8F8FF
-$color-gray = #E3E3E3
+$color-gray = #EAEAEA
 $color-gray-light = #a79da6
+
+$outline-shadow = 0 0 .5em 0.01em $color-secondary
 /*************\
 *   Fonts
 *************/
@@ -87,7 +90,8 @@ input
   border none
   
 input:focus, input:focus-visible, textarea:focus, textareainput:focus-visible
-  outline 2px solid $color-secondary
+  outline 0
+  box-shadow $outline-shadow
   
 
 [data-prefix="fas"], [data-prefix="fab"]
@@ -124,9 +128,13 @@ button
   font-weight thin
   text-transform capitalize
   cursor pointer
+  transition background-color ease-in 150ms, color ease-in 150ms
+  outline 0
   &:hover
-    background-color #d0a0cd
-    color #170b16
+    background-color $color-secondary-hover
+    color $color-primary-hover
+  &:focus-visible
+    box-shadow 0 0 0 .1rem $color-white, 0 0 .5rem .3rem $color-secondary
 
 .container
   // max-width $max-width-mobile

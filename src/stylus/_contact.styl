@@ -11,15 +11,16 @@
     align-items center
     margin: auto;
     max-width: 49rem;
-    @media screen and (min-width: 1024px)
-      flex-direction row
-      justify-content space-between
-      align-items flex-start
-      max-width: unset
+    // @media screen and (min-width: 1024px)
+    //   flex-direction row
+    //   justify-content space-between
+    //   align-items flex-start
+    //   max-width: unset
 
 
   &__cta
     margin-bottom 5rem 
+    text-align center
       
 
 
@@ -27,22 +28,26 @@
     width 100%
     display flex
     flex-direction column
-    @media screen and (min-width: 1024px)
-      width unset
-      align-self center
   &__social-media
     color $color-white
     line-height 0
     display inline-flex
     text-align: center;
     align-self: center;
-    @media screen and (min-width: 1024px)
-      align-self flex-start
   &__link
-    border-radius 50%
-    background $color-primary
-    padding 1rem
-    font-size 3rem
+    a
+      border-radius 50%
+      background $color-primary
+      padding 1rem
+      font-size 3rem
+      cursor pointer
+      display inline-block
+      outline 0
+      &:hover
+        background $color-primary-hover
+        transition background 150ms ease-in
+      &:focus-visible
+        box-shadow 0 0 0 .2rem $color-white, 0 0 .5rem .4rem $color-primary
     & svg
       width 1em !important
     & + & 
@@ -54,8 +59,6 @@
     margin 5rem 0
     display block
     align-self center
-    @media screen and (min-width: 1024px)
-      margin 0
   &__form-container
     flex-grow 1
     max-width 49rem
