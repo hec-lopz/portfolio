@@ -20,11 +20,15 @@ module.exports = {
         use: {
           loader: "babel-loader",
           options: {
-            presets:[ ["@babel/preset-env", {
-              "targets": "defaults"
-            }],
-            "@babel/preset-react"
-          ]
+            presets: [
+              [
+                "@babel/preset-env",
+                {
+                  targets: "defaults",
+                },
+              ],
+              "@babel/preset-react",
+            ],
           },
         },
       },
@@ -36,10 +40,10 @@ module.exports = {
         test: /\.(png|jpg|gif|svg)$/i,
         type: "asset/resource",
       },
-      // {
-      //   test: /\.styl$/i,
-      //   loader: "stylus-loader",
-      // },
+      {
+        test: /\.json$/i,
+        type: "asset/resource",
+      },
       {
         test: /\.styl$/i,
         use: ["style-loader", "css-loader", "stylus-loader"],
