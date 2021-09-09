@@ -1,12 +1,12 @@
-import toggleMenu from "./scripts/toggleMenu.js";
-import "../stylus/main.styl";
-import Card from "./Components/Card";
-import { resizeViewport } from "./scripts/resizeViewport";
+import toggleMenu from "./js/toggleMenu.js";
+import "./stylus/main.styl";
+import Card from "./components/Card";
+import { resizeViewport } from "./js/resizeViewport";
 const debounce = require("lodash/debounce");
 
 import { db, storage } from "./firebase/config";
 import { ref } from "firebase/storage";
-import addData from "./scripts/addData";
+import addData from "./js/addData";
 
 let menuOpen = false;
 const $menu_btn = document.querySelector(".mobile-btn");

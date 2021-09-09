@@ -1,4 +1,4 @@
-import "_card.styl"
+import "./styles/_card.styl";
 
 const Card = () => {
   return (
@@ -51,7 +51,8 @@ const Card = () => {
           </a>
         </div>
       </div>
-    </article>)
+    </article>
+  );
 };
 
 export default Card;
