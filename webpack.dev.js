@@ -5,8 +5,6 @@ module.exports = {
   entry: "./src/index.js",
   output: {
     path: path.resolve(__dirname, "dist"),
-    // filename: "[name].",
-    // publicPath: "/assets/",
   },
   mode: "development",
   resolve: {
@@ -41,8 +39,11 @@ module.exports = {
         type: "asset/resource",
       },
       {
-        test: /\.json$/i,
+        test: /\.(json)$/i,
         type: "asset/resource",
+        generator: {
+          filename: "static/[name]",
+        },
       },
       {
         test: /\.styl$/i,
