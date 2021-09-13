@@ -1,53 +1,54 @@
 import "./styles/_card.styl";
+import React, { useState } from "react";
+import { storage } from "../firebase/config";
+import { ref, getDownloadUrl } from "@firebase/storage";
 
-const Card = () => {
+const Card = ({ project }) => {
+  // const data = getData();
   return (
-    <article class="card">
-      <div class="card__header">
-        <h2 class="card__title">Job listings</h2>
-        <div class="technologies card__technologies">
-          <ul class="technologies__list">
-            <li class="technologies__item">
-              <span class="technologies__tooltip">JavaScript</span>
-              <i class="technologies__icon fab fa-js-square"></i>
+    <article className="card">
+      <div className="card__header">
+        <h2 className="card__title">{project.title}</h2>
+        <div className="technologies card__technologies">
+          <ul className="technologies__list">
+            <li className="technologies__item">
+              <span className="technologies__tooltip">JavaScript</span>
+              <i className="technologies__icon fab fa-js-square"></i>
             </li>
-            <li class="technologies__item">
-              <span class="technologies__tooltip">CSS</span>
-              <i class="technologies__icon fab fa-css3-alt"></i>
+            <li className="technologies__item">
+              <span className="technologies__tooltip">CSS</span>
+              <i className="technologies__icon fab fa-css3-alt"></i>
             </li>
-            <li class="technologies__item">
-              <span class="technologies__tooltip">HTML5</span>
-              <i class="technologies__icon fab fa-html5"></i>
+            <li className="technologies__item">
+              <span className="technologies__tooltip">HTML5</span>
+              <i className="technologies__icon fab fa-html5"></i>
             </li>
           </ul>
         </div>
       </div>
-      <figure class="card__fig">
+      <figure className="card__fig">
         <img
-          class="card__img img"
-          src="./assets/joblist.jpg"
+          className="card__img img"
+          src={project.screenshot}
           alt="Vista previa de Job Listings"
         />
       </figure>
-      <div class="card__body">
-        <p class="card__description">
-          List of job positions with filter made with vanilla JavaScript, CSS,
-          HTML, Webpack and BEM.
-        </p>
-        <div class="card__links">
+      <div className="card__body">
+        <p className="card__description">{project.description}</p>
+        <div className="card__links">
           <a
             target="blank"
-            href="https://hec-lopz.github.io/job-list/index"
-            class="button card__btn card__btn--project"
+            href={project["demo-url"]}
+            className="button card__btn card__btn--project"
           >
             View project
           </a>
           <a
             target="blank"
-            href="https://github.com/hec-lopz/job-list"
-            class="button card__btn card__btn--git"
+            href={project["gh-url"]}
+            className="button card__btn card__btn--git"
           >
-            <i class="fab fa-github"></i>
+            <i className="fab fa-github"></i>
           </a>
         </div>
       </div>
