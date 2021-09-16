@@ -2,6 +2,9 @@
   padding  5rem 0
   @media screen and (min-width: 1280px)
     padding 15rem 0 0
+
+  & .section-title
+    margin-bottom 1rem
   &__content
     display flex
     flex-wrap wrap
@@ -25,7 +28,9 @@
     flex-wrap wrap
     width 70%
     justify-content space-between
-    margin 0 auto
+    // margin 0 auto
+    @media screen and (min-width 956px)
+      width 100%
   &__skills-title
     margin 1rem 0
     // margin-bottom 1rem
