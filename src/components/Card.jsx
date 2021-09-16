@@ -1,40 +1,60 @@
 import "./styles/_card.styl";
+import webpackIcon from "../assets/webpack.svg";
+import firebaseIcon from "../assets/Firebase_Logo2.svg";
 import React, { useState } from "react";
-import { storage } from "../firebase/config";
-import { ref, getDownloadUrl } from "@firebase/storage";
+import { getImgUrl } from "../js/dataFunctions";
+
+const icons = {
+  javascript: "fa-js-square",
+  css: "fa-css3-alt",
+  html5: "fa-html5",
+  html: "fa-html5",
+  grunt: "fa-grunt",
+  react: "fa-react",
+  firebase: firebaseIcon,
+  webpack: webpackIcon,
+};
 
 const Card = ({ project }) => {
-  // const data = getData();
+  const { title, description, technologies, screenshot } = project;
+  const [img, setImg] = useState("");
+  getImgUrl(screenshot).then((res) => setImg(res));
+
   return (
     <article className="card">
       <div className="card__header">
-        <h2 className="card__title">{project.title}</h2>
+        <h2 className="card__title">{title}</h2>
         <div className="technologies card__technologies">
           <ul className="technologies__list">
-            <li className="technologies__item">
-              <span className="technologies__tooltip">JavaScript</span>
-              <i className="technologies__icon fab fa-js-square"></i>
-            </li>
-            <li className="technologies__item">
-              <span className="technologies__tooltip">CSS</span>
-              <i className="technologies__icon fab fa-css3-alt"></i>
-            </li>
-            <li className="technologies__item">
-              <span className="technologies__tooltip">HTML5</span>
-              <i className="technologies__icon fab fa-html5"></i>
-            </li>
+            {technologies.map((item, i) => (
+              <li key={i} className="technologies__item">
+                <span className="technologies__tooltip">{item}</span>
+                {/fa-/.test(icons[item.toLowerCase()]) ? (
+                  <i
+                    className={
+                      "technologies__icon fab " + icons[item.toLowerCase()]
+                    }
+                  ></i>
+                ) : (
+                  <img
+                    src={icons[item.toLowerCase()]}
+                    className="technologies__icon technologies__icon--img"
+                  />
+                )}
+              </li>
+            ))}
           </ul>
         </div>
       </div>
       <figure className="card__fig">
         <img
           className="card__img img"
-          src={project.screenshot}
+          src={img}
           alt="Vista previa de Job Listings"
         />
       </figure>
       <div className="card__body">
-        <p className="card__description">{project.description}</p>
+        <p className="card__description">{description}</p>
         <div className="card__links">
           <a
             target="blank"

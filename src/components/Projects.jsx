@@ -1,7 +1,7 @@
 import "./styles/_projects.styl";
-import { getData } from "../js/addData";
+import { getData } from "../js/dataFunctions";
 import Card from "./Card.jsx";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 const promise = getData();
 const Projects = () => {
   const [data, setData] = useState([]);
@@ -10,13 +10,14 @@ const Projects = () => {
     setData(arr);
   });
 
-  // setData([...arr]);
   if (data.length === 0) {
     return <h1>Cargando</h1>;
   } else {
     return (
       <div className="grid-container">
-        <Card project={data[0]}></Card>
+        {data.map((project, i) => (
+          <Card project={project} key={i}></Card>
+        ))}
       </div>
     );
   }
