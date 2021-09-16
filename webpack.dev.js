@@ -2,25 +2,28 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 
 module.exports = {
-  entry: "./src/scripts/index.js",
+  entry: path.join(__dirname, "src", "index.js"),
   output: {
     path: path.resolve(__dirname, "dist"),
-    // filename: "[name].",
-    // publicPath: "/assets/",
+    filename: "bundle.js",
+    assetModuleFilename: "assets/[hash][ext]",
+    // publicPath: "/",
   },
   mode: "development",
   resolve: {
-    extensions: [".js"],
+    extensions: [".js", ".jsx"],
   },
+  devtool: "inline-source-map",
   module: {
     rules: [
       {
-        test: /\.m?js$/,
+        test: /\.(js|jsx)$/,
         exclude: /(node_modules|bower_components)/,
         use: {
           loader: "babel-loader",
           options: {
-            presets: ["@babel/preset-env"],
+            presets: ["@babel/preset-env", "@babel/preset-react"],
+            plugins: ["@babel/plugin-transform-runtime"],
           },
         },
       },
@@ -32,10 +35,13 @@ module.exports = {
         test: /\.(png|jpg|gif|svg)$/i,
         type: "asset/resource",
       },
-      // {
-      //   test: /\.styl$/i,
-      //   loader: "stylus-loader",
-      // },
+      {
+        test: /\.(json)$/i,
+        type: "asset/resource",
+        generator: {
+          filename: "static/[name]",
+        },
+      },
       {
         test: /\.styl$/i,
         use: ["style-loader", "css-loader", "stylus-loader"],
@@ -44,7 +50,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "src/index.html",
+      template: path.join(__dirname, "src", "index.html"),
       filename: "index.html",
     }),
   ],
