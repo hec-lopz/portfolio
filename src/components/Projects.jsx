@@ -6,9 +6,11 @@ const promise = getData();
 const Projects = () => {
   const [data, setData] = useState([]);
 
-  promise.then((arr) => {
-    setData(arr);
-  });
+  useEffect(() => {
+    promise.then((arr) => {
+      setData(arr);
+    });
+  }, [data]);
 
   if (data.length === 0) {
     return <h1>Cargando</h1>;

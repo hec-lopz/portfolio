@@ -18,7 +18,10 @@ export const getImgUrl = async (fbRef) => {
 };
 
 export const getData = async () => {
-  const projectsQuery = query(collection(db, "projects"), orderBy("title"));
+  const projectsQuery = query(
+    collection(db, "projects"),
+    orderBy("date", "desc")
+  );
   const response = await getDocs(projectsQuery);
   const data = await response.docs.map((item) => {
     const itemData = item.data();

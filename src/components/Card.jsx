@@ -1,7 +1,8 @@
 import "./styles/_card.styl";
 import webpackIcon from "../assets/webpack.svg";
 import firebaseIcon from "../assets/Firebase_Logo2.svg";
-import React, { useState } from "react";
+import styledComponentsIcon from "../assets/styled-components-logo.svg";
+import React, { useState, useEffect } from "react";
 import { getImgUrl } from "../js/dataFunctions";
 
 const icons = {
@@ -13,12 +14,43 @@ const icons = {
   react: "fa-react",
   firebase: firebaseIcon,
   webpack: webpackIcon,
+  "styled-components": styledComponentsIcon,
+};
+
+const convertMonthToName = (monthNum) => {
+  const months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+
+  return months[monthNum];
+};
+
+const processDate = (timestamp) => {
+  const date = timestamp.toDate();
+  const month = date.getMonth();
+  const year = date.getFullYear();
+  const monthName = convertMonthToName(month);
+
+  return `${monthName}, ${year}`;
 };
 
 const Card = ({ project }) => {
-  const { title, description, technologies, screenshot } = project;
+  const { title, description, technologies, screenshot, date } = project;
   const [img, setImg] = useState("");
-  getImgUrl(screenshot).then((res) => setImg(res));
+  useEffect(() => {
+    getImgUrl(screenshot).then((res) => setImg(res));
+  }, []);
 
   return (
     <article className="card">
@@ -44,13 +76,16 @@ const Card = ({ project }) => {
               </li>
             ))}
           </ul>
+          <span className="technologies__date">
+            {date && processDate(date)}
+          </span>
         </div>
       </div>
       <figure className="card__fig">
         <img
           className="card__img img"
           src={img}
-          alt="Vista previa de Job Listings"
+          alt={`Vista previa de ${title}`}
         />
       </figure>
       <div className="card__body">
