@@ -1,0 +1,19 @@
+@media screen and (min-width: 1200px) {
+  .projects .section-title {
+    margin-bottom: 10rem;
+  }
+}
+.grid-container {
+  display: grid;
+  justify-items: center;
+  justify-content: center;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(calc(320px - 40px), 35rem));
+  align-items: stretch;
+}
+@media screen and (min-width: 1280px) {
+  .grid-container {
+    gap: 50px;
+    grid-template-columns: repeat(auto-fill, 350px);
+  }
+}

@@ -1,0 +1,18 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10rem;
+  background: #bfbbbb;
+  width: 100%;
+  padding: 0 2rem;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    height: 20rem;
+  }
+}
+.footer__text {
+  font-size: 1.4rem;
+}
