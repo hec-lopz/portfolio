@@ -1,5 +1,11 @@
 import React from 'react'
 import '../styles/_contact.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+  faGithub,
+  faLinkedin,
+  faTwitter,
+} from '@fortawesome/free-brands-svg-icons'
 
 export default function Contact() {
   return (
@@ -18,7 +24,7 @@ export default function Contact() {
                   target='_blank'
                   rel='noopener noreferrer'
                 >
-                  <i className='fab fa-github'></i>
+                  <FontAwesomeIcon icon={faGithub} />
                 </a>
               </li>
               <li className='contact__link social-media__link'>
@@ -27,7 +33,7 @@ export default function Contact() {
                   target='_blank'
                   rel='noopener noreferrer'
                 >
-                  <i className='fab fa-linkedin-in'></i>
+                  <FontAwesomeIcon icon={faLinkedin} />
                 </a>
               </li>
               <li className='contact__link social-media__link'>
@@ -36,7 +42,7 @@ export default function Contact() {
                   target='_blank'
                   rel='noopener noreferrer'
                 >
-                  <i className='fab fa-twitter'></i>
+                  <FontAwesomeIcon icon={faTwitter} />
                 </a>
               </li>
             </ul>
@@ -51,10 +57,10 @@ export default function Contact() {
               name='contact'
               className='contact__form'
               method='POST'
-              netlify
+              netlify='true'
             >
               <div className='input-group'>
-                <label className='input-group__label' for='name'>
+                <label className='input-group__label' htmlFor='name'>
                   Name
                 </label>
                 <input
@@ -62,12 +68,12 @@ export default function Contact() {
                   id='name'
                   name='name'
                   type='text'
-                  autocomplete='name'
+                  autoComplete='name'
                   required
                 />
               </div>
               <div className='input-group'>
-                <label className='input-group__label' for='email'>
+                <label className='input-group__label' htmlFor='email'>
                   Email address
                 </label>
                 <input
@@ -75,21 +81,21 @@ export default function Contact() {
                   type='email'
                   name='email'
                   id='email'
-                  autocomplete='email'
+                  autoComplete='email'
                   required
                 />
               </div>
               <div className='input-group'>
-                <label className='input-group__label' for='body'>
+                <label className='input-group__label' htmlFor='body'>
                   Message
                 </label>
                 <textarea
                   className='input-group__input input-group__input--text-area'
                   name='body'
                   id='body'
-                  cols='30'
-                  rows='10'
-                  autocomplete='off'
+                  cols={30}
+                  rows={10}
+                  autoComplete='off'
                   required
                 ></textarea>
               </div>

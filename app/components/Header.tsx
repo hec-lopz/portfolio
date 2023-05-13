@@ -1,12 +1,16 @@
 import React from 'react'
 import '../styles/header.css'
 import '../styles/burger.css'
+import Logo from '/public/assets/logo-name.svg'
+import Image from 'next/image'
 
 export default function Header() {
   return (
     <header className='header' id='home'>
-      <div className='container header__container'>
-        <a className='header__logo' href='#'></a>
+      <div className='header__container'>
+        <a className='header__logo' href='#'>
+          <Image src={Logo} alt='logo' width={50} height={50} />
+        </a>
         <button className='mobile-btn'>
           <div className='menu-btn'>
             <div className='menu-btn__burger'></div>
