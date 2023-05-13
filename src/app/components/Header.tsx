@@ -1,15 +1,22 @@
+'use client'
 import React from 'react'
 import '../styles/header.css'
 import '../styles/burger.css'
 import Logo from '/public/assets/logo-name.svg'
 import Image from 'next/image'
+import { CldImage } from 'next-cloudinary'
 
 export default function Header() {
   return (
     <header className='header' id='home'>
       <div className='header__container'>
         <a className='header__logo' href='#'>
-          <Image src={Logo} alt='logo' width={50} height={50} />
+          <CldImage
+            src='/portfolio/logo-name_nfek09.svg'
+            alt='logo'
+            width={125}
+            height={45}
+          />
         </a>
         <button className='mobile-btn'>
           <div className='menu-btn'>

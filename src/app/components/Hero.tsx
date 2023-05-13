@@ -1,12 +1,11 @@
+'use client'
 import React from 'react'
 import HeroGraphic from '/public/assets/dev-graphic.svg'
-import Image from 'next/image'
+import { CldImage } from 'next-cloudinary'
 import '../styles/hero.css'
 import { getAboutData } from '../../lib/getData'
 
 export default function Hero() {
-  const matterResult = getAboutData()
-  console.log(matterResult)
   return (
     <section className='hero'>
       <div className='hero__container container'>
@@ -16,7 +15,13 @@ export default function Hero() {
           <p className='hero__copy'></p>
         </div>
         <figure className='hero__photo'>
-          <Image src={HeroGraphic} alt='dev' />
+          <CldImage
+            src='/portfolio/dev-graphic_s1bhns.svg'
+            alt='dev'
+            className='hero__img'
+            width={1114}
+            height={617}
+          />
         </figure>
       </div>
     </section>

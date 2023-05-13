@@ -1,7 +1,9 @@
+'use client'
 import React from 'react'
 import '../styles/about-me.css'
 import ProfilePic from '/public/assets/pic@434.jpg'
 import Image from 'next/image'
+import { CldImage } from 'next-cloudinary'
 
 export default function AboutMe() {
   return (
@@ -48,7 +50,13 @@ export default function AboutMe() {
             </div>
           </div>
           <figure className='about-me__photo'>
-            <Image src={ProfilePic} alt='Profile pic' className='img' />
+            <CldImage
+              src='/portfolio/pic_434_wmez59.jpg'
+              alt='Profile pic'
+              className='img'
+              width={434}
+              height={550}
+            />
           </figure>
         </div>
       </div>

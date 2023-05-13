@@ -58,6 +58,8 @@
 .hero__img {
   object-position: left;
   object-fit: contain;
+  width: 100%;
+  height: 100%;
 }
 .hero__headline {
   width: 100%;
