@@ -22,13 +22,34 @@
   "homepage": "https://github.com/hec-lopz/portfolio#readme",
   "devDependencies": {
     "@types/react": "18.2.6",
+    "eslint": "8.40.0",
+    "eslint-config-next": "13.4.2",
+    "eslint-config-prettier": "^8.8.0",
     "typescript": "5.0.4"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
     "firebase": "^9.0.0-beta.1",
     "lodash": "^4.17.21",
     "next": "^13.4.2",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "stylus": "^0.59.0"
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true,
+    "jsxSingleQuote": true
+  },
+  "eslintConfig": {
+    "extends": [
+      "next",
+      "prettier"
+    ],
+    "rules": {
+      "react/no-unescaped-entities": 0
+    }
   }
 }
