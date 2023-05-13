@@ -15,8 +15,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+  padding: 2rem;
 }
 @media (min-width: 1280px) {
   .header__container {
@@ -36,8 +35,9 @@
     width: auto;
   }
 }
-.header__logo svg {
+.header__logo img {
   width: 12.5rem;
+  height: auto;
 }
 .header__img {
   width: 100%;

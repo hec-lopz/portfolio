@@ -19,8 +19,8 @@
   /*************\
 *   Fonts
 *************/
-  --font-normal: 'Montserrat', sans-serif;
-  --font-titles: 'Raleway', sans-serif;
+  --font-normal: var(--font-montserrat);
+  --font-titles: var(--font-raleway);
   --font-size-h1: 2.7rem;
   --font-size-h2: 2.4rem;
   --font-size-h3: 2rem;
@@ -46,14 +46,14 @@ html {
   box-sizing: border-box;
 }
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-normal);
   background-color: #eaeaea;
   color: #2d132c;
 }
 h1,
 h2,
 h3 {
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--font-titles);
 }
 h1 {
   font-size: 2.7rem;
