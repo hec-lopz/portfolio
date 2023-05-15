@@ -1,18 +1,15 @@
 'use client'
-import React from 'react'
-import HeroGraphic from '/public/assets/dev-graphic.svg'
 import { CldImage } from 'next-cloudinary'
 import '../styles/hero.css'
-import { getAboutData } from '../../lib/getData'
 
-export default function Hero() {
+export default function Hero({ hero }) {
   return (
     <section className='hero'>
       <div className='hero__container container'>
         <div className='hero__headline'>
-          <h1 className='hero__title'></h1>
+          <h1 className='hero__title'>{hero.intro}</h1>
 
-          <p className='hero__copy'></p>
+          <p className='hero__copy'>{hero.description}</p>
         </div>
         <figure className='hero__photo'>
           <CldImage
