@@ -88,20 +88,20 @@
     align-self: flex-start;
   }
 }
-.hero__em {
+.hero__headline em {
   color: var(--color-primary);
 }
-.hero__title {
+.hero__headline h1 {
   font-size: 2.4rem;
   line-height: 3rem;
   margin: 0;
 }
 @media screen and (min-width: 768px) {
-  .hero__title {
+  .hero__headline h1 {
     font-size: 3.2rem;
   }
 }
-.hero__copy {
+.hero__headline p {
   margin-top: 2rem;
   font-size: 2.6rem;
   line-height: 3rem;
@@ -109,7 +109,7 @@
   font-weight: bold;
 }
 @media screen and (min-width: 768px) {
-  .hero__copy {
+  .hero__headline p {
     font-size: 4.2rem;
     line-height: 4.9rem;
     margin: 0;

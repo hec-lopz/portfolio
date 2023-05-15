@@ -3,9 +3,9 @@ import { getHeroData } from '../../../../lib/getData'
 
 export async function GET() {
   try {
-    const matterResult = getHeroData()
+    const heroData = getHeroData()
 
-    return NextResponse.json(matterResult.data)
+    return NextResponse.json(heroData)
   } catch (error) {
     return NextResponse.json({ error })
   }

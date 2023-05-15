@@ -13,15 +13,21 @@ const API = 'http://localhost:3000'
 export default async function Page() {
   const aboutRes = fetch(`${API}/api/content/about`).then((res) => res.json())
   const heroRes = fetch(`${API}/api/content/hero`).then((res) => res.json())
+  const projectsRes = fetch(`${API}/api/content/projects`).then((res) =>
+    res.json()
+  )
 
-  const [aboutData, heroData] = await Promise.all([aboutRes, heroRes])
-  console.log({ aboutData, heroData })
+  const [aboutData, heroData, projectsData] = await Promise.all([
+    aboutRes,
+    heroRes,
+    projectsRes,
+  ])
 
   return (
     <>
       <Hero hero={heroData} />
       <AboutMe about={aboutData} />
-      <Projects />
+      <Projects projects={projectsData} />
       <Contact />
     </>
   )
