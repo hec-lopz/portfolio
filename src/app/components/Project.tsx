@@ -4,6 +4,7 @@ import { ProjectData } from '../../models/Markdown.model'
 import '../styles/_card.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { icon } from '@fortawesome/fontawesome-svg-core'
 
 const icons = {
   javascript: 'fa-js-square',
@@ -52,10 +53,10 @@ const Project = ({ project }: { project: ProjectData }) => {
         <h2 className='card__title'>{title}</h2>
         <div className='technologies card__technologies'>
           <ul className='technologies__list'>
-            {tech.map((techName, i) => (
+            {tech.map(({ label, icon: iconDefinition }, i) => (
               <li key={i} className='technologies__item'>
-                <span className='technologies__tooltip'>{techName}</span>
-                <span>{techName}</span>
+                <span className='technologies__tooltip'>{label}</span>
+                <FontAwesomeIcon icon={icon(iconDefinition)} />
               </li>
             ))}
           </ul>
@@ -72,7 +73,7 @@ const Project = ({ project }: { project: ProjectData }) => {
         />
       </figure>
       <div className='card__body'>
-        <p className='card__description'>{body}</p>
+        <div dangerouslySetInnerHTML={{ __html: body }} />
         <div className='card__links'>
           <a
             target='blank'

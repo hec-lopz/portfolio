@@ -3,6 +3,7 @@ import path from 'path'
 import matter from 'gray-matter'
 import { micromark } from 'micromark'
 import { AboutData, HeroData, ProjectData } from '../models/Markdown.model'
+import { createBrandIcons } from './createIcons'
 
 const contentDirectory = path.join(process.cwd(), 'content')
 
@@ -63,12 +64,17 @@ export function getProjectsData(): ProjectData[] {
       const filePath = path.join(projectsDir, fileName)
       const fileContent = fs.readFileSync(filePath, 'utf8')
 
-      const { data, content } = matter(fileContent)
+      const {
+        data: { tech, ...data },
+        content,
+      } = matter(fileContent)
 
       const parsedBody = micromark(content)
+      const parsedIcons = createBrandIcons(tech)
 
       return {
         ...(data as ProjectData),
+        tech: parsedIcons,
         body: parsedBody,
       }
     })

@@ -4,9 +4,9 @@ modified_on: 2023-05-15T02:13:16.805Z
 published_date: 2023-05-15T02:13:16.805Z
 title: Job listing
 tech:
-  - javascript
-  - css
-  - html
+  - {label: JavaScript, icon: square-js}
+  - {label: CSS, icon: css3-alt}
+  - {label: HTML5, icon: html5 }
 img_name: cld-sample-5.jpg
 live_url: https://hec-lopz.github.io/job-list/index
 github_url: https://github.com/hec-lopz/job-list

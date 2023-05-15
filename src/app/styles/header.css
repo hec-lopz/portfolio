@@ -21,6 +21,7 @@
   .header__container {
     margin: auto;
     padding: 2rem 0;
+    width: 90%;
   }
 }
 .header__logo {
