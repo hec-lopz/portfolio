@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Web Portfolio',
 }
 
-const API = ''
+const API = process.env.NEXT_API_URL
 
 export default async function Page() {
   const aboutRes = fetch(`${API}/api/content/about`).then((res) => res.json())
