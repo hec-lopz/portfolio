@@ -17,7 +17,5 @@ export function createBrandIcons(
     icon: findIconDefinition({ prefix: 'fab', iconName: icon as IconName }),
   }))
 
-  console.log(iconDefinitions)
-
   return iconDefinitions
 }
