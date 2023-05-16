@@ -10,20 +10,22 @@ export const metadata: Metadata = {
 
 const API = process.env.NEXT_API_URL
 
-export default async function Page() {
-  let aboutData, heroData, projectsData
+const fetchData = async (url: string) => {
   try {
-    aboutData = await fetch(`${API}/api/content/about`).then((res) =>
-      res.json()
-    )
-    heroData = await fetch(`${API}/api/content/hero`).then((res) => res.json())
-    projectsData = await fetch(`${API}/api/content/projects`).then((res) =>
-      res.json()
-    )
+    const res = await fetch(url)
+    const data = await res.json()
+
+    return data
   } catch (err) {
     console.error(err)
-    throw new Error('error on fetches')
+    throw new Error(`Error fetching '${url}'`)
   }
+}
+
+export default async function Page() {
+  const aboutData = await fetchData(`${API}/api/content/about`)
+  const heroData = await fetchData(`${API}/api/content/hero`)
+  const projectsData = await fetchData(`${API}/api/content/projects`)
 
   return (
     <>
