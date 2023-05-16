@@ -1,0 +1,85 @@
+backend:
+  name: test-repo
+  branch: staging # Branch to update (optional; defaults to master)
+media_folder: '/public/images/uploads'
+public_folder: '/images/uploads'
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: dnvzap50b
+    api_key: 371631545459926
+    output_filename_only: true
+collections:
+  - label: 'Page content'
+    name: 'content'
+    files:
+      - label: 'Hero'
+        name: 'hero'
+        file: 'content/hero.md'
+        fields:
+          - label: 'Last modification'
+            name: 'modified_on'
+            widget: 'datetime'
+            time_format: false
+            picker_utc: true
+          - label: 'Intro'
+            name: 'body'
+            widget: 'markdown'
+            minimal: true
+            buttons:
+              - italic
+      - label: 'About me'
+        name: 'about-me'
+        file: 'content/about-me.md'
+        fields:
+          - label: 'Last modification'
+            name: 'modified_on'
+            widget: 'datetime'
+            date_format: 'DD/MM/YY'
+            time_format: false
+            picker_utc: true
+          - { label: 'Description', name: 'description', widget: markdown }
+          - { label: 'Technical Skills', name: 'tech_skills', widget: 'list' }
+          - { label: 'Soft Skills', name: 'soft_skills', widget: 'list' }
+  - label: 'Projects'
+    name: 'projects'
+    folder: 'content/projects'
+    create: true
+    fields:
+      - {
+          label: 'Created on',
+          name: 'created_on',
+          widget: 'datetime',
+          date_format: 'DD/MM/YY',
+          time_format: false,
+          picker_utc: true,
+        }
+      - label: 'Last modification'
+        name: 'modified_on'
+        widget: 'datetime'
+        date_format: 'DD/MM/YY'
+        time_format: false
+        picker_utc: true
+      - {
+          label: 'Published on',
+          name: 'published_date',
+          widget: datetime,
+          time_format: false,
+          date_format: 'MMM, YYYY',
+          format: 'MMM, YYYY',
+          picker_utc: true,
+        }
+      - { label: Title, name: title, widget: string }
+      - label: Tech Stack
+        name: tech
+        widget: list
+        fields:
+          - { label: Label, name: label, widget: string }
+          - { label: FontAwesome Icon, name: icon, widget: string }
+      - label: Preview
+        name: img_name
+        widget: image
+        allow_multiple: false
+      - { label: Live Url, name: live_url, widget: string }
+      - { label: GitHub Url, name: github_url, widget: string }
+      - { label: Description, name: body, widget: markdown }
