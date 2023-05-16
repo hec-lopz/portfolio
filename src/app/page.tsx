@@ -8,17 +8,18 @@ export const metadata: Metadata = {
   title: 'Web Portfolio',
 }
 
-const API = process.env.URL
+const API = 'https://staging--heclopz.com'
 
 const fetchData = async (url: string) => {
+  let fullUrl = API + url
   try {
-    const res = await fetch(`${API}${url}`)
+    const res = await fetch(fullUrl)
     const data = await res.json()
 
     return data
   } catch (err) {
-    console.error({ api: API, err })
-    throw new Error(`Error fetching '${url}'`)
+    console.error({ err })
+    throw new Error(`Error fetching '${fullUrl}'`)
   }
 }
 
