@@ -12,7 +12,7 @@ const API = process.env.URL
 
 const fetchData = async (url: string) => {
   try {
-    const res = await fetch(API + url)
+    const res = await fetch(`${API}${url}`)
     const data = await res.json()
 
     return data
