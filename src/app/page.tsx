@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Web Portfolio',
 }
 
-const API = 'http://localhost:3000'
+const API = ''
 
 export default async function Page() {
   const aboutRes = fetch(`${API}/api/content/about`).then((res) => res.json())
