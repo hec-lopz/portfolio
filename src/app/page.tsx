@@ -23,9 +23,9 @@ const fetchData = async (url: string) => {
 }
 
 export default async function Page() {
-  const aboutData = await fetchData(`${API}/api/content/about`)
-  const heroData = await fetchData(`${API}/api/content/hero`)
-  const projectsData = await fetchData(`${API}/api/content/projects`)
+  const aboutData = await fetchData(`/api/content/about`)
+  const heroData = await fetchData(`/api/content/hero`)
+  const projectsData = await fetchData(`/api/content/projects`)
 
   return (
     <>
