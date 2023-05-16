@@ -8,11 +8,11 @@ export const metadata: Metadata = {
   title: 'Web Portfolio',
 }
 
-const API = process.env.NEXT_API_URL
+const API = process.env.URL
 
 const fetchData = async (url: string) => {
   try {
-    const res = await fetch(url)
+    const res = await fetch(API + url)
     const data = await res.json()
 
     return data
