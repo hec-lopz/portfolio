@@ -17,7 +17,7 @@ const fetchData = async (url: string) => {
 
     return data
   } catch (err) {
-    console.error(err)
+    console.error({ api: API, err })
     throw new Error(`Error fetching '${url}'`)
   }
 }
