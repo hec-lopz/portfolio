@@ -11,17 +11,19 @@ export const metadata: Metadata = {
 const API = process.env.NEXT_API_URL
 
 export default async function Page() {
-  const aboutRes = fetch(`${API}/api/content/about`).then((res) => res.json())
-  const heroRes = fetch(`${API}/api/content/hero`).then((res) => res.json())
-  const projectsRes = fetch(`${API}/api/content/projects`).then((res) =>
-    res.json()
-  )
-
-  const [aboutData, heroData, projectsData] = await Promise.all([
-    aboutRes,
-    heroRes,
-    projectsRes,
-  ])
+  let aboutData, heroData, projectsData
+  try {
+    aboutData = await fetch(`${API}/api/content/about`).then((res) =>
+      res.json()
+    )
+    heroData = await fetch(`${API}/api/content/hero`).then((res) => res.json())
+    projectsData = await fetch(`${API}/api/content/projects`).then((res) =>
+      res.json()
+    )
+  } catch (err) {
+    console.error(err)
+    throw new Error('error on fetches')
+  }
 
   return (
     <>
