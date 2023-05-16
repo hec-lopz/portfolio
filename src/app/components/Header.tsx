@@ -2,8 +2,6 @@
 import React from 'react'
 import '../styles/header.css'
 import '../styles/burger.css'
-import Logo from '/public/assets/logo-name.svg'
-import Image from 'next/image'
 import { CldImage } from 'next-cloudinary'
 
 export default function Header() {

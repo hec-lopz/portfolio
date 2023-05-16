@@ -1,4 +1,4 @@
-; `use client`
+'use client'
 import React from 'react'
 import '../styles/_contact.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
