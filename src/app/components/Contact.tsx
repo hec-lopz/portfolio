@@ -1,5 +1,5 @@
 'use client'
-import React, { EventHandler, FormEvent } from 'react'
+import React, { EventHandler, FormEvent, useEffect } from 'react'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import '../styles/_contact.css'
@@ -10,6 +10,8 @@ import {
   faTwitter,
 } from '@fortawesome/free-brands-svg-icons'
 import { toast } from 'react-toastify'
+
+// eslint-disable react/jsx-no-duplicate-props
 
 export default function Contact() {
   const handleSubmit = () => {
