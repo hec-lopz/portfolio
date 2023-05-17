@@ -3,6 +3,7 @@ import Hero from './components/Hero'
 import AboutMe from './components/AboutMe'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
+import { getAboutData, getHeroData, getProjectsData } from '../lib/getData'
 
 export const metadata: Metadata = {
   title: 'Web Portfolio',
@@ -24,9 +25,9 @@ const fetchData = async (url: string) => {
 }
 
 export default async function Page() {
-  const aboutData = await fetchData(`/api/content/about`)
-  const heroData = await fetchData(`/api/content/hero`)
-  const projectsData = await fetchData(`/api/content/projects`)
+  const aboutData = getAboutData()
+  const heroData = getHeroData()
+  const projectsData = getProjectsData()
 
   return (
     <>
