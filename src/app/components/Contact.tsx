@@ -68,7 +68,6 @@ export default function Contact() {
               onSubmit={handleSubmit}
               action=''
               name='contact'
-              action=''
               className='contact__form'
               method='POST'
               data-netlify='true'
