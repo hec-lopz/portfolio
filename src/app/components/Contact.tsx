@@ -58,6 +58,7 @@ export default function Contact() {
               name='contact'
               className='contact__form'
               method='POST'
+              data-netlify='true'
             >
               <div className='input-group'>
                 <label className='input-group__label' htmlFor='name'>
