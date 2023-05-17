@@ -19,16 +19,18 @@ export function getAboutData(): Omit<AboutData, 'title'> {
 
     const parsedMd = micromark(description)
 
-    return {
+    const data = {
       createdOn,
       modifiedOn,
       description: parsedMd,
       tech_skills,
       soft_skills,
     }
+
+    return data
   } catch (err) {
     console.log(err)
-    throw new Error(err)
+    throw err
   }
 }
 
