@@ -3,7 +3,8 @@ import React, { useRef } from 'react'
 import '../styles/header.css'
 import '../styles/burger.css'
 import { CldImage } from 'next-cloudinary'
-import { toggleMenu } from '../../lib/toggleMenu'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 
 export default function Header() {
   const mobileNavRef = useRef<any>()
@@ -56,7 +57,11 @@ export default function Header() {
                 href='https://drive.google.com/file/d/1EMBeUyMgYrPjrUDgH9scYJID-McecOck/view?usp=sharing'
                 target='_blank'
               >
-                Resume
+                Resume{' '}
+                <FontAwesomeIcon
+                  icon={faArrowUpRightFromSquare}
+                  style={{ width: 18, height: 18 }}
+                />
               </a>
             </li>
           </ul>
