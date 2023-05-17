@@ -1,5 +1,7 @@
 'use client'
-import React from 'react'
+import React, { EventHandler, FormEvent } from 'react'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 import '../styles/_contact.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
@@ -7,10 +9,32 @@ import {
   faLinkedin,
   faTwitter,
 } from '@fortawesome/free-brands-svg-icons'
+import { toast } from 'react-toastify'
 
 export default function Contact() {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    const formData = new FormData(e.target as HTMLFormElement)
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData as URLSearchParams).toString(),
+    })
+      .then(() => {
+        toast.success('Form submitted successfully!', {
+          position: toast.POSITION.BOTTOM_RIGHT,
+        })
+      })
+      .catch((error) => {
+        toast.error('Something went wrong.', {
+          position: toast.POSITION.BOTTOM_RIGHT,
+        })
+      })
+  }
+
   return (
     <section className='contact' id='contact'>
+      <ToastContainer style={{ fontSize: '1.6rem' }} />
       <div className='contact__container container'>
         <h1 className='section-title'>Contact me</h1>
         <div className='contact__content'>
@@ -54,7 +78,7 @@ export default function Contact() {
               Leave your info and I'll contact you back.
             </p>
             <form
-              action=''
+              onSubmit={handleSubmit}
               name='contact'
               className='contact__form'
               method='POST'
