@@ -1,7 +1,7 @@
 ---
 created_on: 2023-05-15T02:13:16.805Z
 modified_on: 2023-05-15T02:13:16.805Z
-published_date: 2023-05-15T02:13:16.805Z
+published_date: Dec, 2023
 title: Job listing
 tech:
   - {label: JavaScript, icon: square-js}
