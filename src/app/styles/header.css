@@ -25,7 +25,7 @@
   }
 }
 .header__logo {
-  width: 4.4rem;
+  width: 4.5rem;
   overflow: hidden;
 }
 .header__logo:focus-visible {
@@ -55,6 +55,7 @@
   padding: 2rem 4rem;
   transform: scaleY(0);
   transform-origin: top center;
+  transition: transform 250ms;
 }
 @media (min-width: 1280px) {
   .header__nav {
@@ -63,6 +64,7 @@
     flex-direction: row;
     padding: 0;
     background-color: unset;
+    box-shadow: unset;
   }
 }
 .header__nav--open {

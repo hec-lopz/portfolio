@@ -9,21 +9,6 @@ export const metadata: Metadata = {
   title: 'Web Portfolio',
 }
 
-const API = process.env.VERCEL_URL || process.env.NEXT_API_URL
-
-const fetchData = async (url: string) => {
-  let fullUrl = API + url
-  try {
-    const res = await fetch(fullUrl)
-    const data = await res.json()
-
-    return data
-  } catch (err) {
-    console.error({ err })
-    throw new Error(`Error fetching '${fullUrl}'`)
-  }
-}
-
 export default async function Page() {
   const aboutData = getAboutData()
   const heroData = getHeroData()

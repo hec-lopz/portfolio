@@ -72,9 +72,6 @@
   z-index: 2;
 }
 @media screen and (max-height: 830px) {
-  .hero__headline {
-    background: var(--color-gray);
-  }
 }
 @media (min-width: 768px) {
   .hero__headline {
@@ -137,5 +134,14 @@
     margin-left: -42rem;
     margin-right: -150px;
     max-width: unset;
+  }
+}
+@media screen and (max-height: 900px) and (min-width: 1420px) {
+  .hero__img {
+    mask-image: linear-gradient(
+      -45deg,
+      rgba(234, 234, 234, 1) 50%,
+      rgba(234, 234, 234, 0) 70%
+    );
   }
 }
