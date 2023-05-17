@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Web Portfolio',
 }
 
-const API = process.env.URL
+const API = process.env.NEXT_API_URL
 
 const fetchData = async (url: string) => {
   let fullUrl = API + url
