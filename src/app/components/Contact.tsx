@@ -1,5 +1,5 @@
 'use client'
-import React, { FormEvent } from 'react'
+import React from 'react'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import '../styles/_contact.css'
@@ -12,9 +12,13 @@ import {
 import { toast } from 'react-toastify'
 
 export default function Contact() {
-  const handleSubmit = () => {
-    toast.success('Form submitted successfully!', {
-      position: toast.POSITION.BOTTOM_RIGHT,
+  const handleSubmit = (e: any) => {
+    e.preventDefault()
+    const formData = new FormData(e.target as HTMLFormElement)
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData as URLSearchParams).toString(),
     })
       .then(() => {
         toast.success('Form submitted successfully!', {
