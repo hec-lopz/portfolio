@@ -12,13 +12,9 @@ import {
 import { toast } from 'react-toastify'
 
 export default function Contact() {
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    const formData = new FormData(e.target as HTMLFormElement)
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(formData as URLSearchParams).toString(),
+  const handleSubmit = () => {
+    toast.success('Form submitted successfully!', {
+      position: toast.POSITION.BOTTOM_RIGHT,
     })
       .then(() => {
         toast.success('Form submitted successfully!', {
@@ -79,6 +75,7 @@ export default function Contact() {
             </p>
             <form
               onSubmit={handleSubmit}
+              action=''
               name='contact'
               className='contact__form'
               method='POST'
