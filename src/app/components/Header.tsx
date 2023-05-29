@@ -2,6 +2,7 @@
 import React, { useRef } from 'react'
 import '../styles/header.css'
 import '../styles/burger.css'
+import utilStyle from '../styles/globals.module.css'
 import { CldImage } from 'next-cloudinary'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'

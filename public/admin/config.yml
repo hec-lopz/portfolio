@@ -1,6 +1,6 @@
 backend:
-  name: test-repo
-  branch: staging # Branch to update (optional; defaults to master)
+  name: git-gateway
+  branch: main # Branch to update (optional; defaults to master)
 media_folder: '/public/images/uploads'
 public_folder: '/images/uploads'
 media_library:

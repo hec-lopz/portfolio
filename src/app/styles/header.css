@@ -22,6 +22,7 @@
     margin: auto;
     padding: 2rem 0;
     width: 90%;
+    max-width: 1420px;
   }
 }
 .header__logo {

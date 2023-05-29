@@ -1,6 +1,5 @@
 'use client'
-// eslint-disable react/jsx-no-duplicate-props
-import React, { EventHandler, FormEvent, useEffect } from 'react'
+import React from 'react'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import '../styles/_contact.css'
@@ -13,7 +12,7 @@ import {
 import { toast } from 'react-toastify'
 
 export default function Contact() {
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault()
     const formData = new FormData(e.target as HTMLFormElement)
     fetch('/', {
@@ -26,7 +25,7 @@ export default function Contact() {
           position: toast.POSITION.BOTTOM_RIGHT,
         })
       })
-      .catch((error) => {
+      .catch(() => {
         toast.error('Something went wrong.', {
           position: toast.POSITION.BOTTOM_RIGHT,
         })
@@ -80,6 +79,7 @@ export default function Contact() {
             </p>
             <form
               onSubmit={handleSubmit}
+              action=''
               name='contact'
               className='contact__form'
               method='POST'
