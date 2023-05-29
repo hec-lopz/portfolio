@@ -1,6 +1,5 @@
 'use client'
-// eslint-disable react/jsx-no-duplicate-props
-import React, { EventHandler, FormEvent, useEffect } from 'react'
+import React, { FormEvent } from 'react'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import '../styles/_contact.css'
@@ -26,7 +25,7 @@ export default function Contact() {
           position: toast.POSITION.BOTTOM_RIGHT,
         })
       })
-      .catch((error) => {
+      .catch(() => {
         toast.error('Something went wrong.', {
           position: toast.POSITION.BOTTOM_RIGHT,
         })
