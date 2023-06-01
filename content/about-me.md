@@ -1,25 +1,25 @@
 ---
 created_on: 2023-05-13T05:20:37.212Z
-modified_on: 2023-05-13T05:20:37.212Z
-description: |
-  I'm a self-taught programmer who is passionate about technology. I'm eager to learn something new every day. My curiosity for understanding how things work grew my interest in crafting software.
-  
-  I am a very friendly person and I really enjoy teamwork, sharing my knowledge and learning from my co-workers is my best attribute. I'm driven by integrity and empathy.
-  
-  I'm proficient in frontend development using vanilla Javascript, but I enjoy using React as well.
-tech_skills: 
+modified_on: 2023-06-01T20:42:41.299Z
+description: I'm a React Developer with 3y of experience building web and mobile
+  frontends. I've worked with agile teams to deliver high-impact products. I'm
+  currently seeking a new opportunity to work with a team where my proposals are
+  heard, and I'm challenged to grow my technical abilities.
+tech_skills:
   - ReactJS
-  - Javascript
-  - Webpack
-  - Stylus
+  - React Native
+  - JavaScript
+  - TypeScript
+  - Tailwind CSS
+  - MERN Stack
   - Sass
-  - BEM
-  - HTML
+  - Semantic HTML
   - CSS
-soft_skills: 
+soft_skills:
+  - English - Conversational (B2)
   - Assertive Communication
   - Problem-solving
+  - Team-player
   - Adaptability
-  - English - B2
   - Spanish - Native
 ---
