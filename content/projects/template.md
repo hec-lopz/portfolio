@@ -8,7 +8,7 @@ tech:
     icon: react
   - label: Node
     icon: node
-img_name: /images/uploads/todo.heclopz.com__pnogo8.png
+img_name: todo.heclopz.com__pnogo8
 live_url: https://todo.heclopz.com/
 github_url: https://github.com/hec-lopz/todo-app
 ---
