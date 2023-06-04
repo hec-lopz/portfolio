@@ -5,10 +5,10 @@ media_folder: '/public/images/uploads'
 public_folder: '/images/uploads'
 media_library:
   name: cloudinary
+  output_filename_only: true
   config:
     cloud_name: dnvzap50b
     api_key: 371631545459926
-    output_filename_only: true
 collections:
   - label: 'Page content'
     name: 'content'
